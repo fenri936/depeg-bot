@@ -42,7 +42,7 @@ class Config:
             # Примеры пар для мониторинга
             self.monitoring_pairs = [
                 MonitoringPair(
-                        chain="ethereum",
+                        chain="Ethereum",
                         pair_address="0x3416cf6c708da44db2624d63ea0aaef7113527c6",
                         name="USDC/USDT"
                     ),
