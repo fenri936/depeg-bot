@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: depeg_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - depeg_network
+
+  watcher:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: depeg_watcher
+    command: python watcher.py
+    env_file:
+      - .env
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - depeg_network
+
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: depeg_bot
+    command: python bot.py
+    env_file:
+      - .env
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - depeg_network
+
+volumes:
+  redis_data:
+
+networks:
+  depeg_network:
+    driver: bridge

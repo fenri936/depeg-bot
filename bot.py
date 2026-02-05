@@ -1,0 +1,194 @@
+import asyncio
+import json
+import logging
+from datetime import datetime
+from typing import Optional
+
+import redis.asyncio as aioredis
+from aiogram import Bot, Dispatcher, Router
+from aiogram.filters import Command
+from aiogram.types import Message
+from config import config
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+# Инициализация бота и роутера
+bot = Bot(token=config.bot_token)
+router = Router()
+dp = Dispatcher()
+dp.include_router(router)
+
+# После инициализации бота
+redis_client: Optional[aioredis.Redis] = None
+
+async def init_redis():
+    global redis_client
+    redis_client = await aioredis.from_url(
+        f"redis://{config.redis_host}:{config.redis_port}",
+        encoding="utf-8",
+        decode_responses=True
+    )
+
+async def add_subscriber(user_id: int):
+    await redis_client.sadd("subscribers", str(user_id))
+
+async def remove_subscriber(user_id: int):
+    await redis_client.srem("subscribers", str(user_id))
+
+async def get_subscribers():
+    return await redis_client.smembers("subscribers")
+
+# В cmd_start
+@router.message(Command("start"))
+async def cmd_start(message: Message):
+    user_id = message.from_user.id
+    await add_subscriber(user_id)  # Сохраняется в Redis
+    # ...
+
+
+# Хранилище подписанных пользователей
+subscribed_users = set()
+
+
+@router.message(Command("start"))
+async def cmd_start(message: Message):
+    """Обработчик команды /start"""
+    user_id = message.from_user.id
+    subscribed_users.add(user_id)
+    
+    await message.answer(
+        "🟢 <b>Monitor active</b>\n\n"
+        "Вы подписаны на алерты о депеге стейблкоинов.\n"
+        f"Порог срабатывания: {config.depeg_threshold}%\n\n"
+        "Команды:\n"
+        "/start - Подписаться на алерты\n"
+        "/stop - Отписаться от алертов\n"
+        "/status - Статус мониторинга",
+        parse_mode="HTML"
+    )
+    logger.info(f"User {user_id} subscribed to alerts")
+
+
+@router.message(Command("stop"))
+async def cmd_stop(message: Message):
+    """Обработчик команды /stop"""
+    user_id = message.from_user.id
+    if user_id in subscribed_users:
+        subscribed_users.remove(user_id)
+        await message.answer("🔴 Вы отписались от алертов")
+        logger.info(f"User {user_id} unsubscribed from alerts")
+    else:
+        await message.answer("Вы не были подписаны на алерты")
+
+
+@router.message(Command("status"))
+async def cmd_status(message: Message):
+    """Обработчик команды /status"""
+    status_text = (
+        f"📊 <b>Статус мониторинга</b>\n\n"
+        f"Подписчиков: {len(subscribed_users)}\n"
+        f"Порог депега: {config.depeg_threshold}%\n"
+        f"Интервал проверки: {config.check_interval}с\n"
+        f"Отслеживаемых пар: {len(config.monitoring_pairs)}\n\n"
+        f"<b>Пары:</b>\n"
+    )
+    
+    for pair in config.monitoring_pairs:
+        status_text += f"• {pair.name} ({pair.chain})\n"
+    
+    await message.answer(status_text, parse_mode="HTML")
+
+
+async def format_alert_message(alert_data: dict) -> str:
+    """Форматирование сообщения об алерте"""
+    direction = "⬆️" if alert_data['current_price'] > alert_data['expected_price'] else "⬇️"
+    
+    message = (
+        f"🚨 <b>DEPEG ALERT</b> 🚨\n\n"
+        f"<b>Пара:</b> {alert_data['pair_name']}\n"
+        f"<b>Сеть:</b> {alert_data['chain']}\n"
+        f"<b>Цена:</b> ${alert_data['current_price']:.6f}\n"
+        f"<b>Ожидаемая:</b> ${alert_data['expected_price']:.2f}\n"
+        f"<b>Отклонение:</b> {direction} {alert_data['deviation']:.2f}%\n"
+        f"<b>Время:</b> {alert_data['timestamp']}\n"
+    )
+    
+    return message
+
+
+async def redis_listener():
+    """Слушатель Redis Pub/Sub канала"""
+    redis_client = await aioredis.from_url(
+        f"redis://{config.redis_host}:{config.redis_port}",
+        encoding="utf-8",
+        decode_responses=True
+    )
+    
+    pubsub = redis_client.pubsub()
+    await pubsub.subscribe(config.redis_channel)
+    
+    logger.info(f"📡 Subscribed to Redis channel: {config.redis_channel}")
+    
+    try:
+        async for message in pubsub.listen():
+            logger.info(f"📨 Received message type: {message['type']}") 
+            
+            if message['type'] == 'message':
+                try:
+                    logger.info(f"📨 Message data: {message['data']}") 
+                    
+                    alert_data = json.loads(message['data'])
+                    alert_message = await format_alert_message(alert_data)
+                    
+                    # Отправка алерта всем подписанным пользователям
+                    subscribers = await get_subscribers()
+                    logger.info(f"👥 Subscribers count: {len(subscribers)}")  
+                    
+                    for user_id in subscribers:
+                        try:
+                            await bot.send_message(
+                                int(user_id),
+                                alert_message,
+                                parse_mode="HTML"
+                            )
+                            logger.info(f"✅ Alert sent to {user_id}")  
+                        except Exception as e:
+                            logger.error(f"Error sending message to {user_id}: {e}")
+                    
+                    logger.info(f"Alert sent to {len(subscribers)} users")
+                    
+                except json.JSONDecodeError:
+                    logger.error("Failed to decode alert message")
+                except Exception as e:
+                    logger.error(f"Error processing alert: {e}")
+                    
+    finally:
+        await pubsub.unsubscribe(config.redis_channel)
+        await redis_client.aclose()  
+
+
+
+async def main():
+    logger.info("🤖 Telegram Bot starting...")
+    logger.info("Monitor active")
+    
+    # Инициализация Redis ПЕРЕД всем остальным
+    await init_redis()  # ← Добавь эту строку
+    
+    # Запуск Redis listener в фоне
+    asyncio.create_task(redis_listener())
+    
+    # Запуск бота
+    try:
+        await dp.start_polling(bot)
+    finally:
+        await bot.session.close()
+        if redis_client:  # Закрываем соединение при завершении
+            await redis_client.close()
+
+if __name__ == "__main__":
+    asyncio.run(main())
