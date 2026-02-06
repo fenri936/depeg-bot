@@ -5,7 +5,7 @@ from typing import Dict, List, Set
 from collections import defaultdict
 
 # Конфигурация
-MIN_LIQUIDITY = 50000
+MIN_LIQUIDITY = 5000
 DEXSCREENER_API = "https://api.dexscreener.com/token-pairs/v1"
 OUTPUT_FILE = "pairs.json"
 TEMP_FILE = "pairs_temp.json"
@@ -14,26 +14,37 @@ BASE_DELAY = 0.5
 RETRY_DELAY = 5
 MAX_RETRIES = 3
 
-# 💎 Базовые ликвидные активы (quote токены)
-QUOTE_TOKENS = [
-    'USDT', 'USDC', 'USDC.E', 'USDbC', 'USDBC',
-    'WETH', 'ETH',  # Только ETH для ETH-оберток
-    'DAI', 'BUSD', 'FRAX'
-]
+# 🌐 Quote токены для каждой сети
+CHAIN_QUOTE_TOKENS = {
+    'ethereum': ['USDT', 'USDC', 'DAI', 'WETH', 'FRAX'],
+    'arbitrum': ['USDC', 'USDC.E', 'USDT', 'WETH', 'DAI'],
+    'optimism': ['USDC', 'USDC.E', 'USDT', 'WETH', 'DAI'],
+    'base': ['USDC', 'USDbC', 'WETH'],
+    'blast': ['USDB', 'WETH'],
+    'polygon': ['USDC', 'USDC.E', 'USDT', 'WMATIC', 'DAI'],
+    'zksync': ['USDC', 'USDT', 'WETH'],
+    'linea': ['USDC', 'USDT', 'WETH'],
+    'scroll': ['USDC', 'USDT', 'WETH'],
+    'mantle': ['USDC', 'USDT', 'WETH'],
+    'mode': ['USDC', 'WETH'],
+    'bsc': ['USDT', 'USDC', 'BUSD', 'WBNB', 'DAI'],
+    'avalanche': ['USDC', 'USDC.E', 'USDT', 'USDT.E', 'WAVAX', 'DAI'],
+    'fantom': ['USDC', 'USDT', 'DAI', 'WFTM'],
+    'cronos': ['USDC', 'USDT', 'DAI', 'WCRO'],
+    'gnosis': ['USDC', 'WXDAI', 'WETH'],
+}
 
-# 🪙 ПРАВИЛЬНЫЕ категории - разделяем по БАЗОВОМУ активу
+# 🪙 Категории токенов
 TOKEN_CATEGORIES = {
     'stablecoins': [
         'USDC', 'USDT', 'DAI', 'BUSD', 'FRAX', 'TUSD', 'USDP',
         'GUSD', 'USDD', 'PYUSD', 'FDUSD', 'crvUSD', 'GHO', 'LUSD',
-        'DOLA', 'alUSD', 'MIM', 'sUSD', 'USDJ', 'USDN',
-        'FEI', 'HUSD', 'OUSD', 'USDX', 'USDK', 'VAI',
-        'CUSD', 'DUSD', 'agEUR', 'EURT', 'EURS', 'EURI',
-        'USDC.E', 'USDC.e', 'USDbC', 'USDBC', 'axlUSDC', 'ceUSDC',
-        'DAI.e', 'FRAX.e', 'USDT.e', 'axlDAI', 'axlUSDT'
+        'DOLA', 'alUSD', 'MIM', 'sUSD',
+        'USDC.E', 'USDC.e', 'USDbC', 'USDBC', 'axlUSDC',
+        'DAI.e', 'FRAX.e', 'USDT.e',
+        'USDB', 'cUSD', 'WXDAI',  # Специфичные для сетей
     ],
     
-    # ⚠️ ТОЛЬКО ETH обертки (НЕ включаем BNB, MATIC и т.д.!)
     'eth_wrappers': [
         'WETH', 'ETH',
         'stETH', 'wstETH', 'rETH', 'cbETH', 
@@ -49,11 +60,10 @@ TOKEN_CATEGORIES = {
     ]
 }
 
-# Семьи токенов - для проверки совместимости
 TOKEN_FAMILIES = {
     'eth': ['WETH', 'ETH', 'stETH', 'wstETH', 'rETH', 'cbETH', 'sfrxETH', 'frxETH', 'ankrETH', 'swETH', 'osETH', 'ETHx', 'mETH', 'wBETH', 'OETH', 'sETH2', 'rETH2', 'aETH', 'SETH'],
     'btc': ['WBTC', 'tBTC', 'renBTC', 'sBTC', 'cbBTC', 'HBTC', 'BTCB', 'pBTC', 'oBTC', 'BBTC', 'BTC.b', 'WBTC.e', 'tBTC.e'],
-    'stable': ['USDC', 'USDT', 'DAI', 'BUSD', 'FRAX', 'TUSD', 'USDP', 'GUSD', 'USDD', 'PYUSD', 'FDUSD', 'crvUSD', 'GHO', 'LUSD', 'DOLA', 'alUSD', 'MIM', 'sUSD', 'USDJ', 'USDN', 'FEI', 'HUSD', 'OUSD', 'USDX', 'USDK', 'VAI', 'CUSD', 'DUSD', 'agEUR', 'EURT', 'EURS', 'EURI', 'USDC.E', 'USDC.e', 'USDbC', 'USDBC', 'axlUSDC', 'ceUSDC', 'DAI.e', 'FRAX.e', 'USDT.e', 'axlDAI', 'axlUSDT']
+    'stable': ['USDC', 'USDT', 'DAI', 'BUSD', 'FRAX', 'TUSD', 'USDP', 'GUSD', 'USDD', 'PYUSD', 'FDUSD', 'crvUSD', 'GHO', 'LUSD', 'DOLA', 'alUSD', 'MIM', 'sUSD', 'USDC.E', 'USDC.e', 'USDbC', 'USDBC', 'axlUSDC', 'DAI.e', 'FRAX.e', 'USDT.e', 'USDB', 'cUSD', 'WXDAI']
 }
 
 SUPPORTED_CHAINS = [
@@ -62,9 +72,37 @@ SUPPORTED_CHAINS = [
     'bsc', 'avalanche', 'fantom', 'cronos', 'gnosis'
 ]
 
+# 📍 РУЧНЫЕ КОНТРАКТЫ для недостающих сетей
+MANUAL_CONTRACTS = {
+    'linea': {
+        'USDC': '0x176211869ca2b568f2a7d4ee941e073a821ee1ff',
+        'USDT': '0xa219439258ca9da29e9cc4ce5596924745e12b93',
+        'WETH': '0xe5d7c2a44ffddf6b295a15c148167daaaf5cf34f',
+        'wstETH': '0xb5bedd42000b71fdde22d3ee8a79bd49a568fc8f',
+    },
+    'scroll': {
+        'USDC': '0x06efdbff2a14a7c8e15944d1f4a48f9f95f663a4',
+        'USDT': '0xf55bec9cafdbe8730f096aa55dad6d22d44099df',
+        'WETH': '0x5300000000000000000000000000000000000004',
+        'wstETH': '0xf610a9dfb7c89644979b4a0f27063e9e7d7cda32',
+    },
+    'mantle': {
+        'USDC': '0x09bc4e0d864854c6afb6eb9a9cdf58ac190d0df9',
+        'USDT': '0x201eba5cc46d216ce6dc03f6a759e8e766e956ae',
+        'WETH': '0xdeaddeaddeaddeaddeaddeaddeaddeaddead1111',
+    },
+    'blast': {
+        'USDB': '0x4300000000000000000000000000000000000003',
+        'WETH': '0x4300000000000000000000000000000000000004',
+    },
+    'mode': {
+        'USDC': '0xd988097fb8612cc24eec14542bc03424c656005f',
+        'WETH': '0x4200000000000000000000000000000000000006',
+    },
+}
+
 
 def get_token_family(symbol: str) -> str:
-    """Определение семьи токена"""
     symbol = symbol.upper()
     for family, tokens in TOKEN_FAMILIES.items():
         if symbol in [t.upper() for t in tokens]:
@@ -72,34 +110,58 @@ def get_token_family(symbol: str) -> str:
     return 'unknown'
 
 
+def is_quote_token(symbol: str, chain: str) -> bool:
+    symbol = symbol.upper()
+    chain_quotes = CHAIN_QUOTE_TOKENS.get(chain.lower(), [])
+    return symbol in [q.upper() for q in chain_quotes]
+
+
+def classify_token(symbol: str) -> str:
+    symbol = symbol.upper()
+    for category, tokens in TOKEN_CATEGORIES.items():
+        if symbol in [t.upper() for t in tokens]:
+            return category
+    return 'unknown'
+
+
 def load_coingecko_tokens() -> List[Dict]:
-    """Загрузка токенов из CoinGecko token list"""
-    url = "https://tokens.coingecko.com/uniswap/all.json"
+    """Загрузка из нескольких CoinGecko token lists"""
+    token_lists = [
+        "https://tokens.coingecko.com/uniswap/all.json",
+        "https://tokens.coingecko.com/arbitrum-one/all.json",
+        "https://tokens.coingecko.com/optimistic-ethereum/all.json",
+        "https://tokens.coingecko.com/base/all.json",
+        "https://tokens.coingecko.com/polygon-pos/all.json",
+    ]
     
-    try:
-        print("📥 Загружаю CoinGecko token list...")
-        response = requests.get(url, timeout=20)
-        if response.status_code == 200:
-            data = response.json()
-            tokens = data.get('tokens', [])
-            print(f"✅ Загружено {len(tokens)} токенов от CoinGecko")
-            return tokens
-        else:
-            print(f"⚠️ CoinGecko вернул статус {response.status_code}")
-            return []
-    except Exception as e:
-        print(f"❌ Ошибка загрузки CoinGecko: {e}")
-        return []
+    all_tokens = []
+    
+    for url in token_lists:
+        try:
+            chain_name = url.split('/')[-2]
+            print(f"📥 Загружаю {chain_name}...")
+            response = requests.get(url, timeout=20)
+            if response.status_code == 200:
+                data = response.json()
+                tokens = data.get('tokens', [])
+                all_tokens.extend(tokens)
+                print(f"  ✓ {len(tokens)} токенов")
+                time.sleep(0.3)
+        except Exception as e:
+            print(f"  ✗ Ошибка: {e}")
+    
+    print(f"✅ Всего от CoinGecko: {len(all_tokens)} токенов")
+    return all_tokens
 
 
 def load_1inch_tokens() -> Dict[str, List[Dict]]:
-    """Загрузка токенов из 1inch для разных сетей"""
     chain_ids = {
         '1': 'ethereum',
         '10': 'optimism',
         '56': 'bsc',
         '137': 'polygon',
         '250': 'fantom',
+        '25': 'cronos',
         '42161': 'arbitrum',
         '43114': 'avalanche',
         '8453': 'base',
@@ -109,6 +171,7 @@ def load_1inch_tokens() -> Dict[str, List[Dict]]:
     
     all_tokens = {}
     
+    print("\n📥 Загружаю токены от 1inch...")
     for chain_id, chain_name in chain_ids.items():
         try:
             url = f"https://tokens.1inch.io/v1.2/{chain_id}"
@@ -133,30 +196,36 @@ def load_1inch_tokens() -> Dict[str, List[Dict]]:
     return all_tokens
 
 
-def classify_token(symbol: str) -> str:
-    """Определение категории токена"""
-    symbol = symbol.upper()
+def load_manual_contracts() -> Dict:
+    """Загрузка ручных контрактов"""
+    print("\n📝 Добавляю ручные контракты...")
     
-    for category, tokens in TOKEN_CATEGORIES.items():
-        if symbol in [t.upper() for t in tokens]:
-            return category
+    contracts = defaultdict(lambda: defaultdict(list))
     
-    return 'unknown'
-
-
-def is_quote_token(symbol: str) -> bool:
-    """Является ли токен базовым ликвидным активом (quote)"""
-    return symbol.upper() in [q.upper() for q in QUOTE_TOKENS]
+    for chain, tokens in MANUAL_CONTRACTS.items():
+        for symbol, address in tokens.items():
+            category = classify_token(symbol)
+            if category == 'unknown':
+                continue
+                
+            contracts[chain][symbol].append({
+                'address': address.lower(),
+                'category': category,
+                'is_quote': is_quote_token(symbol, chain),
+                'family': get_token_family(symbol)
+            })
+        
+        print(f"  ✓ {chain}: {len(tokens)} токенов")
+    
+    return contracts
 
 
 def extract_verified_contracts() -> Dict:
-    """Извлечение всех верифицированных контрактов"""
     print("\n🔍 Извлекаю верифицированные контракты...\n")
     
     coingecko_tokens = load_coingecko_tokens()
-    
-    print("\n📥 Загружаю токены от 1inch...")
     oneinch_tokens = load_1inch_tokens()
+    manual_contracts = load_manual_contracts()
     
     all_tokens = []
     all_tokens.extend(coingecko_tokens)
@@ -164,15 +233,21 @@ def extract_verified_contracts() -> Dict:
     for chain_tokens in oneinch_tokens.values():
         all_tokens.extend(chain_tokens)
     
-    print(f"\n📊 Всего токенов из всех источников: {len(all_tokens)}")
+    print(f"\n📊 Всего токенов из API: {len(all_tokens)}")
     
     contracts = defaultdict(lambda: defaultdict(list))
+    
+    # Сначала добавляем ручные контракты
+    for chain, tokens in manual_contracts.items():
+        for symbol, token_list in tokens.items():
+            contracts[chain][symbol].extend(token_list)
     
     chain_id_map = {
         1: 'ethereum', 10: 'optimism', 25: 'cronos', 56: 'bsc',
         100: 'gnosis', 137: 'polygon', 250: 'fantom', 324: 'zksync',
         5000: 'mantle', 8453: 'base', 42161: 'arbitrum',
-        43114: 'avalanche', 59144: 'linea', 81457: 'blast', 534352: 'scroll',
+        43114: 'avalanche', 59144: 'linea', 81457: 'blast',
+        534352: 'scroll', 34443: 'mode',
     }
     
     for token in all_tokens:
@@ -194,7 +269,7 @@ def extract_verified_contracts() -> Dict:
         contracts[chain_name][symbol].append({
             'address': address,
             'category': category,
-            'is_quote': is_quote_token(symbol),
+            'is_quote': is_quote_token(symbol, chain_name),
             'family': get_token_family(symbol)
         })
     
