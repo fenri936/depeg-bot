@@ -94,7 +94,7 @@ class DexScreenerWatcher:
                     'current_price': current_price,
                     'expected_price': pair.expected_price,
                     'deviation': round(deviation, 2),
-                    'timestamp': datetime.utcnow().isoformat(),
+                    'timestamp': datetime.now().strftime('%d.%m.%Y %H:%M:%S'),
                     'pair_address': pair.pair_address
                 }
                 await self.publish_alert(alert_data)
