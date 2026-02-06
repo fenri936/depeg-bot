@@ -107,6 +107,9 @@ async def format_alert_message(alert_data: dict) -> str:
     """Форматирование сообщения об алерте"""
     direction = "⬆️" if alert_data['current_price'] > alert_data['expected_price'] else "⬇️"
     
+    # Формируем ссылку на DEX Screener
+    dex_url = f"https://dexscreener.com/{alert_data['chain']}/{alert_data['pair_address']}"
+    
     message = (
         f"🚨 <b>DEPEG ALERT</b> 🚨\n\n"
         f"<b>Пара:</b> {alert_data['pair_name']}\n"
@@ -114,7 +117,8 @@ async def format_alert_message(alert_data: dict) -> str:
         f"<b>Цена:</b> ${alert_data['current_price']:.6f}\n"
         f"<b>Ожидаемая:</b> ${alert_data['expected_price']:.2f}\n"
         f"<b>Отклонение:</b> {direction} {alert_data['deviation']:.2f}%\n"
-        f"<b>Время:</b> {alert_data['timestamp']}\n"
+        f"<b>Время:</b> {alert_data['timestamp']}\n\n"
+        f"📊 <a href='{dex_url}'>Открыть на DEX Screener</a>"
     )
     
     return message
