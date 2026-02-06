@@ -1,0 +1,24 @@
+{
+  "stables": [
+    "USDC",
+    "USDT",
+    "DAI",
+    "FRAX",
+    "USDC.e",
+    "USDbC",
+    "LUSD",
+    "BUSD"
+  ],
+  "eth_wrappers": [
+    "WETH",
+    "stETH",
+    "wstETH",
+    "rETH",
+    "cbETH"
+  ],
+  "btc_wrappers": [
+    "WBTC",
+    "renBTC",
+    "tBTC"
+  ]
+}

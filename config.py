@@ -1,4 +1,5 @@
 import os
+import json
 from dataclasses import dataclass
 from typing import List
 from dotenv import load_dotenv
@@ -39,13 +40,36 @@ class Config:
     
     def __post_init__(self):
         if self.monitoring_pairs is None:
-            # Примеры пар для мониторинга
-            self.monitoring_pairs = [
+            self.monitoring_pairs = self._load_pairs_from_json()
+    
+    def _load_pairs_from_json(self) -> List[MonitoringPair]:
+        """Загрузка пар из pairs.json"""
+        pairs_file = "pairs.json"
+        
+        try:
+            with open(pairs_file, 'r', encoding='utf-8') as f:
+                pairs_data = json.load(f)
+            
+            pairs = [
                 MonitoringPair(
-                        chain="ethereum",
-                        pair_address="0x3416cf6c708da44db2624d63ea0aaef7113527c6",
-                        name="USDC/USDT"
-                    ),
+                    chain=pair['chain'],
+                    pair_address=pair['pair_address'],
+                    name=pair['name'],
+                    expected_price=pair.get('expected_price', 1.0)
+                )
+                for pair in pairs_data
             ]
+            
+            print(f"✅ Загружено {len(pairs)} пар из {pairs_file}")
+            return pairs
+            
+        except FileNotFoundError:
+            print(f"⚠️ Файл {pairs_file} не найден!")
+            print("ℹ️ Запусти: python fetch_pairs.py")
+            return []
+            
+        except Exception as e:
+            print(f"❌ Ошибка загрузки пар: {e}")
+            return []
 
 config = Config()

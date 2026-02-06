@@ -138,41 +138,50 @@ async def redis_listener():
     logger.info(f"📡 Subscribed to Redis channel: {config.redis_channel}")
     
     try:
-        async for message in pubsub.listen():
-            logger.info(f"📨 Received message type: {message['type']}") 
+        while True:
+            message = await pubsub.get_message(ignore_subscribe_messages=True, timeout=1.0)
             
-            if message['type'] == 'message':
-                try:
-                    logger.info(f"📨 Message data: {message['data']}") 
+            if message is not None:
+                logger.info(f"📨 Received message type: {message['type']}")
+                
+                if message['type'] == 'message':
+                    try:
+                        logger.info(f"📨 Message data: {message['data']}")
+                        
+                        alert_data = json.loads(message['data'])
+                        alert_message = await format_alert_message(alert_data)
+                        
+                        # Отправка алерта всем подписанным пользователям
+                        subscribers = await get_subscribers()
+                        logger.info(f"👥 Subscribers count: {len(subscribers)}")
+                        
+                        for user_id in subscribers:
+                            try:
+                                await bot.send_message(
+                                    int(user_id),
+                                    alert_message,
+                                    parse_mode="HTML",
+                                    disable_web_page_preview=True  # ← Добавить эту строку
+                                )
+                                logger.info(f"✅ Alert sent to {user_id}")
+                            except Exception as e:
+                                logger.error(f"Error sending message to {user_id}: {e}")
+                        
+                        logger.info(f"Alert sent to {len(subscribers)} users")
+                        
+                    except json.JSONDecodeError:
+                        logger.error("Failed to decode alert message")
+                    except Exception as e:
+                        logger.error(f"Error processing alert: {e}")
+            
+            await asyncio.sleep(0.01)
                     
-                    alert_data = json.loads(message['data'])
-                    alert_message = await format_alert_message(alert_data)
-                    
-                    # Отправка алерта всем подписанным пользователям
-                    subscribers = await get_subscribers()
-                    logger.info(f"👥 Subscribers count: {len(subscribers)}")  
-                    
-                    for user_id in subscribers:
-                        try:
-                            await bot.send_message(
-                                int(user_id),
-                                alert_message,
-                                parse_mode="HTML"
-                            )
-                            logger.info(f"✅ Alert sent to {user_id}")  
-                        except Exception as e:
-                            logger.error(f"Error sending message to {user_id}: {e}")
-                    
-                    logger.info(f"Alert sent to {len(subscribers)} users")
-                    
-                except json.JSONDecodeError:
-                    logger.error("Failed to decode alert message")
-                except Exception as e:
-                    logger.error(f"Error processing alert: {e}")
-                    
+    except asyncio.CancelledError:
+        logger.info("Redis listener cancelled")
     finally:
         await pubsub.unsubscribe(config.redis_channel)
-        await redis_client.aclose()  
+        await pubsub.close()
+        await redis_client.close()
 
 
 

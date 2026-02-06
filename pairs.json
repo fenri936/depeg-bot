@@ -1,0 +1,1922 @@
+[
+  {
+    "chain": "solana",
+    "pair_address": "E2qxzv31zMubKhx5U4SJg9xUmV6qQViRCdA7hsCy8Wxb",
+    "name": "USDT /USDT",
+    "expected_price": 1.0,
+    "dex": "raydium",
+    "liquidity_usd": 6607156710.42
+  },
+  {
+    "chain": "solana",
+    "pair_address": "9jEndXguchAfG9zvHJzsvNJV2CcmfSttRnyakLUd3Prj",
+    "name": "DAI/USDC",
+    "expected_price": 1.0,
+    "dex": "orca",
+    "liquidity_usd": 5415040716.33
+  },
+  {
+    "chain": "solana",
+    "pair_address": "DToUnRAdNGXQZG9YVSyih6gRYUoikEH9z5k1HvuboCvm",
+    "name": "DAI/USDC",
+    "expected_price": 1.0,
+    "dex": "meteora",
+    "liquidity_usd": 5363845664.14
+  },
+  {
+    "chain": "solana",
+    "pair_address": "8vZnSvwjBw2TD43a9cqBo43FzDdYyTX5xe6PenRhGqi4",
+    "name": "USDC /USDT",
+    "expected_price": 1.0,
+    "dex": "raydium",
+    "liquidity_usd": 1410731454.08
+  },
+  {
+    "chain": "solana",
+    "pair_address": "3ZU6ymh6K2Hk9NgUtfufzzyUpsBYhsM6hqEuqHMUY64r",
+    "name": "TBTC/USDC",
+    "expected_price": 1.0,
+    "dex": "meteora",
+    "liquidity_usd": 708571600.53
+  },
+  {
+    "chain": "solana",
+    "pair_address": "Ffsz94P4Ux8wrXohN147U8nmyCxp79NwANHuw725hN1w",
+    "name": "FRAX/USDC",
+    "expected_price": 1.0,
+    "dex": "meteora",
+    "liquidity_usd": 295783033.17
+  },
+  {
+    "chain": "polygon",
+    "pair_address": "0xeADED72b125885aa1248bCaF43292D988e772849",
+    "name": "DAI/USDT0",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 265129177.46
+  },
+  {
+    "chain": "solana",
+    "pair_address": "2PuBQzUh86cPbizpQbQm5ji7j9gBA1DMGv1eAi41aAoA",
+    "name": "FRAX/USDC",
+    "expected_price": 1.0,
+    "dex": "meteora",
+    "liquidity_usd": 88884101.85
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022",
+    "name": "stETH/ETH",
+    "expected_price": 1.0,
+    "dex": "curve",
+    "liquidity_usd": 86509802.32
+  },
+  {
+    "chain": "polygon",
+    "pair_address": "0xDC75d1BBFf2866C3fa778F93311703FbDae50590",
+    "name": "DAI/USDT0",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 85785890.75
+  },
+  {
+    "chain": "cronos",
+    "pair_address": "0x39cC0E14795A8e6e9D02A21091b81FE0d61D82f9",
+    "name": "USDT/USDC",
+    "expected_price": 1.0,
+    "dex": "vvsfinance",
+    "liquidity_usd": 30040309.28
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x47cA96Ea59C13F72745928887f84C9F52C3D7348",
+    "name": "cbETH/WETH",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 29058626.81
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x21E27a5E5513D6e65C4f830167390997aA84843a",
+    "name": "stETH/ETH",
+    "expected_price": 1.0,
+    "dex": "curve",
+    "liquidity_usd": 24719555.32
+  },
+  {
+    "chain": "polkadot",
+    "pair_address": "0x6d6f646c6f6d6e69706f6f6c0000000000000000000000000000000000000000-1-1000765",
+    "name": "tBTC/H2O",
+    "expected_price": 1.0,
+    "dex": "hydration",
+    "liquidity_usd": 23882743.43
+  },
+  {
+    "chain": "bsc",
+    "pair_address": "0xFa09940612D7Ae39F7F220f3Ca6816bd72844577",
+    "name": "LUSD/USDT",
+    "expected_price": 1.0,
+    "dex": "pancakeswap",
+    "liquidity_usd": 21013305.73
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x73A38006d23517a1d383C88929B2014F8835B38B",
+    "name": "tBTC/WBTC",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 12917082.07
+  },
+  {
+    "chain": "plasma",
+    "pair_address": "0xCe4Ac514CA6a9db357CcCc105B7848d7fd37445d",
+    "name": "WETH/USDT0",
+    "expected_price": 1.0,
+    "dex": "oku",
+    "liquidity_usd": 12662400.45
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0xDcEF968d416a41Cdac0ED8702fAC8128A64241A2",
+    "name": "FRAX/USDC",
+    "expected_price": 1.0,
+    "dex": "curve",
+    "liquidity_usd": 10181427.88
+  },
+  {
+    "chain": "hyperevm",
+    "pair_address": "0x6c9A33E3b592C0d65B3Ba59355d5Be0d38259285",
+    "name": "USDC/WHYPE",
+    "expected_price": 1.0,
+    "dex": "prjx",
+    "liquidity_usd": 9198201.93
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x1ea5870f7C037930CE1d5d8d9317c670e89e13E3-0xae78736Cd615f374D3085123A210448E74Fc6393-0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "name": "rETH/WETH",
+    "expected_price": 1.0,
+    "dex": "balancer",
+    "liquidity_usd": 8177770.83
+  },
+  {
+    "chain": "seiv2",
+    "pair_address": "0xcca2352200a63eb0Aaba2D40BA69b1d32174F285",
+    "name": "USDC/WSEI",
+    "expected_price": 1.0,
+    "dex": "dragonswap",
+    "liquidity_usd": 7026432.61
+  },
+  {
+    "chain": "solana",
+    "pair_address": "HktfL7iwGKT5QHjywQkcDnZXScoh811k7akrMZJkCcEF",
+    "name": "WETH/SOL",
+    "expected_price": 1.0,
+    "dex": "orca",
+    "liquidity_usd": 6414277.82
+  },
+  {
+    "chain": "linea",
+    "pair_address": "0x8418e91cf8Cbf7Dd37B6492e23Bec75D0F4D81D8",
+    "name": "USDC/USDT",
+    "expected_price": 1.0,
+    "dex": "etherex",
+    "liquidity_usd": 5835922.96
+  },
+  {
+    "chain": "polkadot",
+    "pair_address": "0x7fe7d370617e793b178de6efc9bc5813382f2e2866ee298ea1917d8b8dce436b-10-22",
+    "name": "USDT/USDC",
+    "expected_price": 1.0,
+    "dex": "hydration",
+    "liquidity_usd": 3833380.75
+  },
+  {
+    "chain": "abstract",
+    "pair_address": "0x5F41a8205a5Be2aA317c562E456E3b1231d3518F",
+    "name": "USDT/USDC.e",
+    "expected_price": 1.0,
+    "dex": "aborean",
+    "liquidity_usd": 2915388.36
+  },
+  {
+    "chain": "starknet",
+    "pair_address": "0x03fe2b97c1fd336e750087d68b9b867997fd64a2661ff3ca5a7c771641e8e7ac-0x04daa17763b286d1e59b97c283c0b8c949994c361e426a28f743c67bdfe9a32f-34028236692093847977029636859101184-200-0x0",
+    "name": "tBTC/WBTC",
+    "expected_price": 1.0,
+    "dex": "ekubo",
+    "liquidity_usd": 2688427.94
+  },
+  {
+    "chain": "cronos",
+    "pair_address": "0x8F09fFf247B8fDB80461E5Cf5E82dD1aE2EBd6d7",
+    "name": "WBTC/WCRO",
+    "expected_price": 1.0,
+    "dex": "vvsfinance",
+    "liquidity_usd": 2600064.72
+  },
+  {
+    "chain": "katana",
+    "pair_address": "0xa452A726f2066B15DaB04764017CFc4d997Cab40",
+    "name": "wstETH/vbETH",
+    "expected_price": 1.0,
+    "dex": "sushiswap",
+    "liquidity_usd": 2403396.85
+  },
+  {
+    "chain": "starknet",
+    "pair_address": "0x033068f6539f8e6e6b131e6b2b814e6c34a5224bc66947c47dab9dfee93b35fb-0x03fe2b97c1fd336e750087d68b9b867997fd64a2661ff3ca5a7c771641e8e7ac-170141183460469235273462165868118016-1000-0x0",
+    "name": "WBTC/USDC",
+    "expected_price": 1.0,
+    "dex": "ekubo",
+    "liquidity_usd": 2224942.24
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-1910:0",
+    "name": "USDC.e/USDT.e",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 1858384.12
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x4028DAAC072e492d34a3Afdbef0ba7e35D8b55C4",
+    "name": "stETH/WETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 1658795.7
+  },
+  {
+    "chain": "manta",
+    "pair_address": "0x462609C41ca27bD4240778c53c0908542B59B972",
+    "name": "USDC/USDT",
+    "expected_price": 1.0,
+    "dex": "quickswap",
+    "liquidity_usd": 1575643.64
+  },
+  {
+    "chain": "abstract",
+    "pair_address": "0xB3cF80E7E3988705E45F5EA1Cf0Be8a50fA8Af17",
+    "name": "USDT/USDC.e",
+    "expected_price": 1.0,
+    "dex": "aborean",
+    "liquidity_usd": 1553494.86
+  },
+  {
+    "chain": "cronos",
+    "pair_address": "0x0843E99Cd8C55d8034f6CE63B7bC8Cccc5D250D5",
+    "name": "USDC.e/USDC",
+    "expected_price": 1.0,
+    "dex": "vvsfinance",
+    "liquidity_usd": 1506505.04
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-1910:2",
+    "name": "DAI/USDC.e",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 1496245.89
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-1910:1",
+    "name": "DAI/USDT.e",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 1494277.43
+  },
+  {
+    "chain": "arbitrum",
+    "pair_address": "0xe9e6b9aAAfaf6816C3364345F6eF745CcFC8660a",
+    "name": "tBTC/WBTC",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 1457856.64
+  },
+  {
+    "chain": "solana",
+    "pair_address": "B5EwJVDuAauzUEEdwvbuXzbFFgEYnUqqS37TUM1c4PQA",
+    "name": "WBTC/SOL",
+    "expected_price": 1.0,
+    "dex": "orca",
+    "liquidity_usd": 1410885.57
+  },
+  {
+    "chain": "cronos",
+    "pair_address": "0xA111C17f8B8303280d3EB01BBcd61000AA7F39F9",
+    "name": "WETH/WCRO",
+    "expected_price": 1.0,
+    "dex": "vvsfinance",
+    "liquidity_usd": 1256082.88
+  },
+  {
+    "chain": "tron",
+    "pair_address": "TR4fHizLc7xCy6v1UVdTqLxYzTW1QHCds6",
+    "name": "USDT/TUSD",
+    "expected_price": 1.0,
+    "dex": "sunswap",
+    "liquidity_usd": 1246992.66
+  },
+  {
+    "chain": "mantle",
+    "pair_address": "0x0e70C050D81E8d328694c9557AF989610a411c45",
+    "name": "WETH/cmETH",
+    "expected_price": 1.0,
+    "dex": "merchantmoe",
+    "liquidity_usd": 1178855.63
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-6416",
+    "name": "USDt/USDC",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 1168239.39
+  },
+  {
+    "chain": "base",
+    "pair_address": "0xa41Bc0AFfbA7Fd420d186b84899d7ab2aC57fcD1",
+    "name": "USDT/USDC",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 1158771.52
+  },
+  {
+    "chain": "berachain",
+    "pair_address": "0xb16fFD445d3c785476F87017b79423eC9057406b",
+    "name": "USDC.e/HONEY",
+    "expected_price": 1.0,
+    "dex": "kodiak",
+    "liquidity_usd": 1153752.23
+  },
+  {
+    "chain": "starknet",
+    "pair_address": "0x0057912720381af14b0e5c87aa4718ed5e527eab60b3801ebf702ab09139e38b-0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7-0-190-0x0",
+    "name": "wstETH/ETH",
+    "expected_price": 1.0,
+    "dex": "ekubo",
+    "liquidity_usd": 1152327.16
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x553e9C493678d8606d6a5ba284643dB2110Df823",
+    "name": "rETH/WETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 1139355.96
+  },
+  {
+    "chain": "linea",
+    "pair_address": "0x0Ed01D983d65a1D624d1942Ec268656987750aCC",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "etherex",
+    "liquidity_usd": 1128516.86
+  },
+  {
+    "chain": "linea",
+    "pair_address": "0x90E8a5b881D211f418d77Ba8978788b62544914B",
+    "name": "WETH/USDC",
+    "expected_price": 1.0,
+    "dex": "etherex",
+    "liquidity_usd": 1104919.75
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x861A2922bE165a5Bd41b1E482B49216b465e1B5F",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 1048972.65
+  },
+  {
+    "chain": "mantle",
+    "pair_address": "0x0D9E39D357337eDde4A9BC12178da40256e2f533",
+    "name": "WETH/cmETH",
+    "expected_price": 1.0,
+    "dex": "agni",
+    "liquidity_usd": 1047850.12
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x7ED17e037B7d88A8270c89B3aFA9C38e5218F12b",
+    "name": "LUSD/BOLD",
+    "expected_price": 1.0,
+    "dex": "curve",
+    "liquidity_usd": 997666.09
+  },
+  {
+    "chain": "polkadot",
+    "pair_address": "0x5329b576fa57846563a03a3ea6620fec4eeb8fb68fdef4dbe18531c590ba7905-1000767-0xc64980e4eaf9a1151bd21712b9946b81e41e2b92",
+    "name": "USDT/aUSDT",
+    "expected_price": 1.0,
+    "dex": "hydration",
+    "liquidity_usd": 992869.67
+  },
+  {
+    "chain": "aptos",
+    "pair_address": "thala-5",
+    "name": "USDC/USDC",
+    "expected_price": 1.0,
+    "dex": "thala",
+    "liquidity_usd": 959897.01
+  },
+  {
+    "chain": "arbitrum",
+    "pair_address": "0x35218a1cbaC5Bbc3E57fd9Bd38219D37571b3537",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 890435.99
+  },
+  {
+    "chain": "xrpl",
+    "pair_address": "5553444300000000000000000000000000000000.rGm7WCVp9gb4jZHWTEtGUr4dd74z2XuWhE_XRP",
+    "name": "USDC/XRP",
+    "expected_price": 1.0,
+    "dex": "xrpl",
+    "liquidity_usd": 876010.42
+  },
+  {
+    "chain": "polkadot",
+    "pair_address": "0x5329b576fa57846563a03a3ea6620fec4eeb8fb68fdef4dbe18531c590ba7905-1000766-0xc64980e4eaf9a1151bd21712b9946b81e41e2b92",
+    "name": "USDC/aUSDT",
+    "expected_price": 1.0,
+    "dex": "hydration",
+    "liquidity_usd": 874353.31
+  },
+  {
+    "chain": "flare",
+    "pair_address": "0x724bD6413925Dd4D513B35b1cf9c6f1C378e3691",
+    "name": "WETH/USD₮0",
+    "expected_price": 1.0,
+    "dex": "sparkdex",
+    "liquidity_usd": 864782.36
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-5516:5",
+    "name": "USDC.e/USDT.e",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 856665.85
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-5516:2",
+    "name": "USDC.e/USDt",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 835711.45
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-5516:3",
+    "name": "USDC/USDT.e",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 835546.68
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-5516:4",
+    "name": "USDC.e/USDC",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 835178.78
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-5516:1",
+    "name": "USDt/USDT.e",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 835077.14
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-5516:0",
+    "name": "USDt/USDC",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 834780.45
+  },
+  {
+    "chain": "manta",
+    "pair_address": "0x12CdDeD759B14bf6A34FbF6638aec9B735824a9E",
+    "name": "WETH/USDC",
+    "expected_price": 1.0,
+    "dex": "quickswap",
+    "liquidity_usd": 834725.82
+  },
+  {
+    "chain": "seiv2",
+    "pair_address": "0xe62fD4661C85e126744cC335E9bca8Ae3D5d19D1",
+    "name": "WBTC/USDC",
+    "expected_price": 1.0,
+    "dex": "dragonswap",
+    "liquidity_usd": 824037.59
+  },
+  {
+    "chain": "scroll",
+    "pair_address": "0x04566Bf83399E4F750728d1ef57008AedDA00E71",
+    "name": "WETH/USDC",
+    "expected_price": 1.0,
+    "dex": "0x1d25AF2b0992bf227b350860Ea80Bad47382CAf6",
+    "liquidity_usd": 719912.11
+  },
+  {
+    "chain": "solana",
+    "pair_address": "4v8ufj8Hj7UvFgtofQJAtzUud5xomwZfEqfCTHZ4wM72",
+    "name": "WBTC/cbBTC",
+    "expected_price": 1.0,
+    "dex": "orca",
+    "liquidity_usd": 712954.35
+  },
+  {
+    "chain": "seiv2",
+    "pair_address": "0x3E00Dd875fEf6cE2209007c1e625d9A656E32556",
+    "name": "WBTC/WSEI",
+    "expected_price": 1.0,
+    "dex": "dragonswap",
+    "liquidity_usd": 692950.76
+  },
+  {
+    "chain": "celo",
+    "pair_address": "0x57332c214E647063bB4c5A73e5A8b7bbA79Be1E4",
+    "name": "WBTC/USD₮",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 675061.03
+  },
+  {
+    "chain": "aptos",
+    "pair_address": "thala-940",
+    "name": "WBTC/USDC",
+    "expected_price": 1.0,
+    "dex": "thala",
+    "liquidity_usd": 669457.65
+  },
+  {
+    "chain": "base",
+    "pair_address": "0xA6385c73961dd9C58db2EF0c4EB98cE4B60651e8",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 651772.5
+  },
+  {
+    "chain": "hyperevm",
+    "pair_address": "0xe712D505572b3f84C1B4deB99E1BeAb9dd0E23c9",
+    "name": "USDC/WHYPE",
+    "expected_price": 1.0,
+    "dex": "hyperswap",
+    "liquidity_usd": 643852.54
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x9BB646BF0F4Da44bfaF3d899e774DE065731EDFe",
+    "name": "cbETH/WETH",
+    "expected_price": 1.0,
+    "dex": "alien-base",
+    "liquidity_usd": 642041.37
+  },
+  {
+    "chain": "celo",
+    "pair_address": "0xF55791AfBB35aD42984f18D6Fe3e1fF73D81900c",
+    "name": "WETH/USD₮",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 639305.07
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x31351Bf3fba544863FBff44DDC27bA880916A199",
+    "name": "FRAX/WETH",
+    "expected_price": 1.0,
+    "dex": "fraxswap",
+    "liquidity_usd": 584174.08
+  },
+  {
+    "chain": "hedera",
+    "pair_address": "0x27784a45fDEE4d8f355237a4E92f259c1D7D7617",
+    "name": "USDC/USDC[hts]",
+    "expected_price": 1.0,
+    "dex": "saucerswap",
+    "liquidity_usd": 572216.58
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x138aceE5573fA09e7F215965ff60898cc33c6330",
+    "name": "tBTC/cbBTC",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 567040.77
+  },
+  {
+    "chain": "sonic",
+    "pair_address": "0x9053fE060f412ad5677f934F89e07524343eE8E7",
+    "name": "USDT/USDC",
+    "expected_price": 1.0,
+    "dex": "shadow-exchange",
+    "liquidity_usd": 552002.23
+  },
+  {
+    "chain": "starknet",
+    "pair_address": "0x03fe2b97c1fd336e750087d68b9b867997fd64a2661ff3ca5a7c771641e8e7ac-0x04718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d-34028236692093847977029636859101184-200-0x0",
+    "name": "WBTC/STRK",
+    "expected_price": 1.0,
+    "dex": "ekubo",
+    "liquidity_usd": 548585.27
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-4525",
+    "name": "FRAX/wNEAR",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 545232.63
+  },
+  {
+    "chain": "ink",
+    "pair_address": "0x62C92624B8583156FC9345A7a0ED8a1F6A9Ad848",
+    "name": "USDC/USD₮0",
+    "expected_price": 1.0,
+    "dex": "velodrome",
+    "liquidity_usd": 529270.2
+  },
+  {
+    "chain": "solana",
+    "pair_address": "8GuXrPq6deS1ZzNXYmBjVZ5P48cAmKGrhhpdAn2FURPC",
+    "name": "WBTC/cbBTC",
+    "expected_price": 1.0,
+    "dex": "raydium",
+    "liquidity_usd": 529252.4
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x257FCbAE4Ac6B26A02E4FC5e1a11e4174B5ce395",
+    "name": "cbETH/WETH",
+    "expected_price": 1.0,
+    "dex": "pancakeswap",
+    "liquidity_usd": 483317.66
+  },
+  {
+    "chain": "solana",
+    "pair_address": "53oyyjgybx6dH7i5aGeKfBUi3xPJQDeBkaENPri57x2H",
+    "name": "WBTC/cbBTC",
+    "expected_price": 1.0,
+    "dex": "meteora",
+    "liquidity_usd": 473515.12
+  },
+  {
+    "chain": "mantle",
+    "pair_address": "0xF0601AA87a7341a38034B49f9517dd3adC2DdeC4",
+    "name": "WETH/cmETH",
+    "expected_price": 1.0,
+    "dex": "merchantmoe",
+    "liquidity_usd": 470624.18
+  },
+  {
+    "chain": "linea",
+    "pair_address": "0x5Ec5b1E9b1Bd5198343ABB6E55Fb695d2F7Bb308",
+    "name": "WETH/USDC",
+    "expected_price": 1.0,
+    "dex": "syncswap",
+    "liquidity_usd": 430843.55
+  },
+  {
+    "chain": "flare",
+    "pair_address": "0xf02DBD2A21D8E6fe48a51eD51dDc0d4621db45D0",
+    "name": "WETH/FXRP",
+    "expected_price": 1.0,
+    "dex": "sparkdex",
+    "liquidity_usd": 429351.16
+  },
+  {
+    "chain": "movement",
+    "pair_address": "0x5aac8966e6f70d7027d8d98663057072ddef93645959ad6a15377bc314e1ae1",
+    "name": "USDC.e/USDT.e",
+    "expected_price": 1.0,
+    "dex": "yuzu",
+    "liquidity_usd": 424574.77
+  },
+  {
+    "chain": "zksync",
+    "pair_address": "0xE955C98e8411ee4c7332EBe48Df7F0cA12711DC2",
+    "name": "USDC/WETH",
+    "expected_price": 1.0,
+    "dex": "syncswap",
+    "liquidity_usd": 415552.45
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x63818BbDd21E69bE108A23aC1E84cBf66399Bd7D",
+    "name": "stETH/WETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 411878.84
+  },
+  {
+    "chain": "avalanche",
+    "pair_address": "0xfc231423E1a863d94Abb21D9f68e8C2589B3Edb9",
+    "name": "WBTC/BTC.b",
+    "expected_price": 1.0,
+    "dex": "blackhole",
+    "liquidity_usd": 406351.65
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x9EfE1A1Cbd6Ca51Ee8319AFc4573d253C3B732af",
+    "name": "rETH/WETH",
+    "expected_price": 1.0,
+    "dex": "curve",
+    "liquidity_usd": 388086.19
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x0CD6f267b2086bea681E922E19D40512511BE538",
+    "name": "FRAX/crvUSD",
+    "expected_price": 1.0,
+    "dex": "curve",
+    "liquidity_usd": 376182.67
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x9b25899648292dce5f8805823aebd0d025bf2625be3162a2f1199e13d8d300c8",
+    "name": "rETH/ETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 364095.89
+  },
+  {
+    "chain": "scroll",
+    "pair_address": "0x814A23B053FD0f102AEEda0459215C2444799C70",
+    "name": "WETH/USDC",
+    "expected_price": 1.0,
+    "dex": "syncswap",
+    "liquidity_usd": 361924.34
+  },
+  {
+    "chain": "solana",
+    "pair_address": "4yrHms7ekgTBgJg77zJ33TsWrraqHsCXDtuSZqUsuGHb",
+    "name": "WETH/SOL",
+    "expected_price": 1.0,
+    "dex": "raydium",
+    "liquidity_usd": 353692.93
+  },
+  {
+    "chain": "osmosis",
+    "pair_address": "1212-ibc_D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858-ibc_498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+    "name": "USDC/USDC",
+    "expected_price": 1.0,
+    "dex": "osmosis",
+    "liquidity_usd": 350758.9
+  },
+  {
+    "chain": "mantle",
+    "pair_address": "0x3b6c029E6409f2868769871F9Ed6825b15BDca15",
+    "name": "WETH/mETH",
+    "expected_price": 1.0,
+    "dex": "merchantmoe",
+    "liquidity_usd": 340187
+  },
+  {
+    "chain": "bsc",
+    "pair_address": "0x2aaF38CF74414deF7b6bE1b0852884eb3c0e33fA",
+    "name": "LUSD/BUSD",
+    "expected_price": 1.0,
+    "dex": "pancakeswap",
+    "liquidity_usd": 339017.01
+  },
+  {
+    "chain": "linea",
+    "pair_address": "0xC0Cd56E070e25913D631876218609F2191dA1c2A",
+    "name": "WBTC/WETH",
+    "expected_price": 1.0,
+    "dex": "etherex",
+    "liquidity_usd": 335189.58
+  },
+  {
+    "chain": "base",
+    "pair_address": "0xf81e1a62cBfA487E807044618661bFD4802B4982",
+    "name": "tBTC/USDC",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 320580.63
+  },
+  {
+    "chain": "soneium",
+    "pair_address": "0xCD80Af2043e233A56700A32e75312aaaa13677D8",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "velodrome",
+    "liquidity_usd": 319691.49
+  },
+  {
+    "chain": "hyperevm",
+    "pair_address": "0x12Df9913E9E08453440e3C4B1aE73819160b513E",
+    "name": "USDC/WHYPE",
+    "expected_price": 1.0,
+    "dex": "kittenswap",
+    "liquidity_usd": 318582.73
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x840DEEef2f115Cf50DA625F7368C24af6fE74410",
+    "name": "cbETH/WETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 316144.5
+  },
+  {
+    "chain": "optimism",
+    "pair_address": "0xbF30Ff33CF9C6b0c48702Ff17891293b002DfeA4",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "velodrome",
+    "liquidity_usd": 312438.83
+  },
+  {
+    "chain": "bsc",
+    "pair_address": "0xEBafA9fef336c673863599Bf2246c29480d041ff",
+    "name": "LUSD/USDC",
+    "expected_price": 1.0,
+    "dex": "pancakeswap",
+    "liquidity_usd": 308603.04
+  },
+  {
+    "chain": "base",
+    "pair_address": "0xA33f162da19C7273BA1205BFD9D4340dA2446E3a",
+    "name": "tBTC/WETH",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 305979.91
+  },
+  {
+    "chain": "hyperevm",
+    "pair_address": "0x5a177cF0EfFB7e0e7115D792E587c1A5a9CbC9D4",
+    "name": "USDC/WHYPE",
+    "expected_price": 1.0,
+    "dex": "ramses",
+    "liquidity_usd": 288120.85
+  },
+  {
+    "chain": "cronos",
+    "pair_address": "0x0101112C7aDdb2E8197922e9cFa17cbAA935ECCc",
+    "name": "WBTC/WETH",
+    "expected_price": 1.0,
+    "dex": "mmfinance",
+    "liquidity_usd": 287671.86
+  },
+  {
+    "chain": "solana",
+    "pair_address": "3sehQcVywWcFJZ1ri3NmJ7MRkrXbViJMRNN5b6kz8Mqn",
+    "name": "WBTC/USDC",
+    "expected_price": 1.0,
+    "dex": "meteora",
+    "liquidity_usd": 285624.15
+  },
+  {
+    "chain": "pulsechain",
+    "pair_address": "0xFf1eFdf60A84268cB5CDB310f05ff47b242EBc20",
+    "name": "WBTC/DAI",
+    "expected_price": 1.0,
+    "dex": "pulsex",
+    "liquidity_usd": 283619.48
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x5f07bb9fEE6062e9D09A52E6d587c64bAD6bA706",
+    "name": "USDT/USDC",
+    "expected_price": 1.0,
+    "dex": "pancakeswap",
+    "liquidity_usd": 278559.86
+  },
+  {
+    "chain": "bsc",
+    "pair_address": "0x14732123c443f8E815D5c64f3C7ecb63bCeEab74",
+    "name": "FRAX/WBNB",
+    "expected_price": 1.0,
+    "dex": "fraxswap",
+    "liquidity_usd": 275022.65
+  },
+  {
+    "chain": "linea",
+    "pair_address": "0xd5E04ba35908D7bF5BD2eAd7e3e14d21df07DC01",
+    "name": "WETH/USDT",
+    "expected_price": 1.0,
+    "dex": "etherex",
+    "liquidity_usd": 273254.35
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x19398851F424e03eED4b09A47f3bf5b0Dd85805b",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "hydrex",
+    "liquidity_usd": 269410.94
+  },
+  {
+    "chain": "hyperevm",
+    "pair_address": "0xBE512f5881b85c48D9C17BC5bb2bE047d156D696",
+    "name": "USDC/WHYPE",
+    "expected_price": 1.0,
+    "dex": "nest",
+    "liquidity_usd": 264408.89
+  },
+  {
+    "chain": "aptos",
+    "pair_address": "liquidswapv0p5-16",
+    "name": "USDC/USDT",
+    "expected_price": 1.0,
+    "dex": "liquidswap",
+    "liquidity_usd": 260929.7
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-4514",
+    "name": "FRAX/USDC",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 257169.02
+  },
+  {
+    "chain": "base",
+    "pair_address": "0xB4885Bc63399BF5518b994c1d0C153334Ee579D0",
+    "name": "WETH/USDbC",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 250436.76
+  },
+  {
+    "chain": "aptos",
+    "pair_address": "pcs-152",
+    "name": "USDC/USDT",
+    "expected_price": 1.0,
+    "dex": "pancakeswap",
+    "liquidity_usd": 248325.2
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x93054188d876f558f4a66B2EF1d97d16eDf0895B",
+    "name": "renBTC/WBTC",
+    "expected_price": 1.0,
+    "dex": "curve",
+    "liquidity_usd": 244923.02
+  },
+  {
+    "chain": "berachain",
+    "pair_address": "0xCD1929eE788b25581A2b3Ac55a138a14347D3304",
+    "name": "USDC.e/USD₮0",
+    "expected_price": 1.0,
+    "dex": "kodiak",
+    "liquidity_usd": 239415.76
+  },
+  {
+    "chain": "base",
+    "pair_address": "0xBd59a718E60bd868123C6E949c9fd97185EFbDB7",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "pancakeswap",
+    "liquidity_usd": 236515.33
+  },
+  {
+    "chain": "celo",
+    "pair_address": "0x34757893070B0FC5de37AaF2844255fF90F7F1E0",
+    "name": "USDC/USDm",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 232901.73
+  },
+  {
+    "chain": "base",
+    "pair_address": "0xf272fa039c68a79015b721df554f3bcb8a54016df9075e67a654b4d63e6afc51",
+    "name": "WBTC/USDC",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 231827.63
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x488d6ea6064eEE9352fdCDB7BC50d98A7fF3AD4E",
+    "name": "tBTC/cbBTC",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 231381.95
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x2223F9FE624F69Da4D8256A7bCc9104FBA7F8f75",
+    "name": "AERO/USDbC",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 216815.76
+  },
+  {
+    "chain": "solana",
+    "pair_address": "AU971DrPyhhrpRnmEBp5pDTWL2ny7nofb5vYBjDJkR2E",
+    "name": "WETH/USDC",
+    "expected_price": 1.0,
+    "dex": "orca",
+    "liquidity_usd": 212010.73
+  },
+  {
+    "chain": "bsc",
+    "pair_address": "0x30F907C5BeC5bcf1dcAF85b9a2E90eF6B15FFe71",
+    "name": "LUSD/MGC",
+    "expected_price": 1.0,
+    "dex": "pancakeswap",
+    "liquidity_usd": 211767.28
+  },
+  {
+    "chain": "avalanche",
+    "pair_address": "0xC725819a7c2A5d3DA243e02eb886b4C5f2B4dc6A",
+    "name": "FRAX/WAVAX",
+    "expected_price": 1.0,
+    "dex": "fraxswap",
+    "liquidity_usd": 211486.05
+  },
+  {
+    "chain": "apechain",
+    "pair_address": "0xD54DBBBfaADca6A4D985Cd08c27E24C8a06433A0",
+    "name": "USDC.e/WAPE",
+    "expected_price": 1.0,
+    "dex": "camelot",
+    "liquidity_usd": 210908.85
+  },
+  {
+    "chain": "solana",
+    "pair_address": "4kdxjt8pKEW4qV4ji4HANixwswDJw3Egn8L4x2BEWQqT",
+    "name": "WBTC/SOL",
+    "expected_price": 1.0,
+    "dex": "meteora",
+    "liquidity_usd": 210370.91
+  },
+  {
+    "chain": "xrpl",
+    "pair_address": "5553445400000000000000000000000000000000.rGbUjUtNVq5M3Un5r4efJqHed4o5P2Usdt_XRP",
+    "name": "USDT/XRP",
+    "expected_price": 1.0,
+    "dex": "xrpl",
+    "liquidity_usd": 209386.31
+  },
+  {
+    "chain": "flare",
+    "pair_address": "0xdF4b31b81D59EcA0CFc30ecb2beb36EAEbaf7A49",
+    "name": "USDT/WFLR",
+    "expected_price": 1.0,
+    "dex": "blazeswap",
+    "liquidity_usd": 200620.4
+  },
+  {
+    "chain": "solana",
+    "pair_address": "3potGhhaNyzvCNq1CGh2wLbZLLMjpdPtG1Hpj8q2DDVR",
+    "name": "WETH/SOL",
+    "expected_price": 1.0,
+    "dex": "meteora",
+    "liquidity_usd": 196652.37
+  },
+  {
+    "chain": "kava",
+    "pair_address": "0x26216b7b7dE80399b601b8217DA272b82d4f34cb",
+    "name": "USDt/WKAVA",
+    "expected_price": 1.0,
+    "dex": "0xD6E4170C9097A5B5C85E8A39111bF37E47C90076",
+    "liquidity_usd": 188916.04
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x7681c00520c26da8d8970c21a65461c726f274068eb08743debc1178e697044e",
+    "name": "USDT/USDC",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 187168.43
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x119e84276578b845bee46a85be30924b7739c151dadaad4f42d6f5869f60a6a3",
+    "name": "WBTC/cbBTC",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 183064.95
+  },
+  {
+    "chain": "celo",
+    "pair_address": "0x8917bA2A352C6D3e1AcD5ea0A0bF7f203046149e",
+    "name": "WBTC/CELO",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 181730.45
+  },
+  {
+    "chain": "cronos",
+    "pair_address": "0xd6E42E6052561e6Eb1b71D0045B7b1bfbDD43DC8",
+    "name": "WBTC/USDC",
+    "expected_price": 1.0,
+    "dex": "vvsfinance",
+    "liquidity_usd": 177648.12
+  },
+  {
+    "chain": "worldchain",
+    "pair_address": "0x494D68e3cAb640fa50F4c1B3E2499698D1a173A0",
+    "name": "WETH/WLD",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 176354.34
+  },
+  {
+    "chain": "osmosis",
+    "pair_address": "1880-factory_osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek_alloyed_allUSDT-ibc_498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+    "name": "USDT/USDC",
+    "expected_price": 1.0,
+    "dex": "osmosis",
+    "liquidity_usd": 175643.71
+  },
+  {
+    "chain": "solana",
+    "pair_address": "55BrDTCLWayM16GwrMEQU57o4PTm6ceF9wavSdNZcEiy",
+    "name": "WBTC/USDC",
+    "expected_price": 1.0,
+    "dex": "orca",
+    "liquidity_usd": 172435.49
+  },
+  {
+    "chain": "celo",
+    "pair_address": "0x0d76866F78FcBCa2730E60C5997d59d6ba585613",
+    "name": "WETH/CELO",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 172127.05
+  },
+  {
+    "chain": "base",
+    "pair_address": "0xD56da2B74bA826f19015E6B7Dd9Dae1903E85DA1",
+    "name": "USDT/USDC",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 162839.06
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x9785eF59E2b499fB741674ecf6fAF912Df7b3C1b",
+    "name": "USDT/WETH",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 162134.97
+  },
+  {
+    "chain": "zksync",
+    "pair_address": "0x12e7A9423d9128287E63017eE6d1f20e1C237f15",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "syncswap",
+    "liquidity_usd": 158123.21
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x74A4bF2cad1b172cDc82a5Da7130C7A59EB5460b",
+    "name": "cbETH/WETH",
+    "expected_price": 1.0,
+    "dex": "quickswap",
+    "liquidity_usd": 157540.04
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0xa4e0faA58465A2D369aa21B3e42d43374c6F9613",
+    "name": "rETH/WETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 155833.35
+  },
+  {
+    "chain": "ink",
+    "pair_address": "0x317728bcCE5d1C2895b71b01eEBbB6989ae504aE",
+    "name": "USDC.e/USD₮0",
+    "expected_price": 1.0,
+    "dex": "velodrome",
+    "liquidity_usd": 154513.79
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x03122FC0c902d6fe9cf019E16A406EAC8eFA7FdD",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "quickswap",
+    "liquidity_usd": 150117.6
+  },
+  {
+    "chain": "metis",
+    "pair_address": "0x59051B5F5172b69E66869048Dc69D35dB0B3610d",
+    "name": "WETH/Metis",
+    "expected_price": 1.0,
+    "dex": "netswap",
+    "liquidity_usd": 148977.72
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0xe7c6E0A739021CdbA7aAC21b4B728779EeF974D9",
+    "name": "rETH/frxETH",
+    "expected_price": 1.0,
+    "dex": "curve",
+    "liquidity_usd": 148738.3
+  },
+  {
+    "chain": "manta",
+    "pair_address": "0x66C0232D3C5F0c25914785606e73BD41B788b9aC",
+    "name": "WETH/USDT",
+    "expected_price": 1.0,
+    "dex": "quickswap",
+    "liquidity_usd": 147443.28
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x5FAE7E604FC3e24fd43A72867ceBaC94c65b404A",
+    "name": "cbETH/WETH",
+    "expected_price": 1.0,
+    "dex": "curve",
+    "liquidity_usd": 147052.18
+  },
+  {
+    "chain": "flare",
+    "pair_address": "0x0752164e765B600ea5216774e91123b6058A9942",
+    "name": "WETH/FXRP",
+    "expected_price": 1.0,
+    "dex": "sparkdex",
+    "liquidity_usd": 143757.1
+  },
+  {
+    "chain": "aptos",
+    "pair_address": "thala-15",
+    "name": "USDC/USDT",
+    "expected_price": 1.0,
+    "dex": "thala",
+    "liquidity_usd": 143550.33
+  },
+  {
+    "chain": "solana",
+    "pair_address": "DrGLDK2tNu2cgepbZMWAtHo3NQVKeGe6jNWyBUimmk6X",
+    "name": "WBTC/SOL",
+    "expected_price": 1.0,
+    "dex": "meteora",
+    "liquidity_usd": 141929.44
+  },
+  {
+    "chain": "cronos",
+    "pair_address": "0xfd0Cd0C651569D1e2e3c768AC0FFDAB3C8F4844f",
+    "name": "WETH/USDC",
+    "expected_price": 1.0,
+    "dex": "vvsfinance",
+    "liquidity_usd": 140578.99
+  },
+  {
+    "chain": "abstract",
+    "pair_address": "0xbA304C6518D01460b6F0597714254ECD73803553",
+    "name": "USDT/USDC.e",
+    "expected_price": 1.0,
+    "dex": "aborean",
+    "liquidity_usd": 138831.11
+  },
+  {
+    "chain": "arbitrum",
+    "pair_address": "0xCb198a55e2a88841E855bE4EAcaad99422416b33",
+    "name": "tBTC/WETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 134658.52
+  },
+  {
+    "chain": "base",
+    "pair_address": "0xe1d05fe2b899df927bc67e5eedaccb95d06bf7c769ed68469bb773615f2401f8",
+    "name": "USDT/USDC",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 134589.82
+  },
+  {
+    "chain": "soneium",
+    "pair_address": "0x7ED634e87db3Bd1Fd6bE6F15E38f3434c75D64c7",
+    "name": "WBTC/WETH",
+    "expected_price": 1.0,
+    "dex": "kyo-finance",
+    "liquidity_usd": 132486.38
+  },
+  {
+    "chain": "linea",
+    "pair_address": "0x35521ec62d91375AC9510d1FeEFe254b4B582EA0",
+    "name": "USDC/USDT",
+    "expected_price": 1.0,
+    "dex": "etherex",
+    "liquidity_usd": 131194.29
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x82a0c1a0d4EF0c0cA3cFDA3AD1AA78309Cc6139b",
+    "name": "wstETH/AERO",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 130015.38
+  },
+  {
+    "chain": "starknet",
+    "pair_address": "0x042b8f0484674ca266ac5d08e4ac6a3fe65bd3129795def2dca5c34ecc5f96d2-0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7-34028236692093847977029636859101184-200-0x0",
+    "name": "wstETH/ETH",
+    "expected_price": 1.0,
+    "dex": "ekubo",
+    "liquidity_usd": 129932.01
+  },
+  {
+    "chain": "linea",
+    "pair_address": "0x6E9AD0B8A41E2c148e7B0385d3EcBFDb8A216a9B",
+    "name": "USDC/USDT",
+    "expected_price": 1.0,
+    "dex": "lynex",
+    "liquidity_usd": 128106.28
+  },
+  {
+    "chain": "starknet",
+    "pair_address": "0x03fe2b97c1fd336e750087d68b9b867997fd64a2661ff3ca5a7c771641e8e7ac-0x04daa17763b286d1e59b97c283c0b8c949994c361e426a28f743c67bdfe9a32f-0-100-0x0",
+    "name": "tBTC/WBTC",
+    "expected_price": 1.0,
+    "dex": "ekubo",
+    "liquidity_usd": 127226.13
+  },
+  {
+    "chain": "optimism",
+    "pair_address": "0x38133C2775Ed3F8C698d5741a24bA833f8724e7A",
+    "name": "wstETH/USDC",
+    "expected_price": 1.0,
+    "dex": "velodrome",
+    "liquidity_usd": 125313.28
+  },
+  {
+    "chain": "base",
+    "pair_address": "0xd3020570106c58635ff7f549659c4c310409c9a5d698cb826842bc8a39e3ce81",
+    "name": "USDT/USDC",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 125070.81
+  },
+  {
+    "chain": "celo",
+    "pair_address": "0xeDEf616c799402D7AF9181Db484372D8aCE74843",
+    "name": "USDT/USD₮",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 124892.12
+  },
+  {
+    "chain": "berachain",
+    "pair_address": "0xd667467e27cD3Ff1845f08C2D9e638B57DDc75c3",
+    "name": "USDC.e/HONEY",
+    "expected_price": 1.0,
+    "dex": "bulla",
+    "liquidity_usd": 123328.99
+  },
+  {
+    "chain": "worldchain",
+    "pair_address": "0x5f835420502A7702de50Cd0E78D8aA3608b2137e",
+    "name": "WETH/USDC",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 122281.18
+  },
+  {
+    "chain": "aptos",
+    "pair_address": "0xe57370199b66fc07ff6013faa8e7a4d89df11652246235fc873a19b731793761-0xa-0x68844a0d7f2587e726ad0579f3d640865bb4162c08a4589eeda3f9689ec52a3d",
+    "name": "WBTC/APT",
+    "expected_price": 1.0,
+    "dex": "thala",
+    "liquidity_usd": 121199.31
+  },
+  {
+    "chain": "xrpl",
+    "pair_address": "5553444300000000000000000000000000000000.rcEGREd8NmkKRE8GE424sksyt1tJVFZwu_XRP",
+    "name": "USDC/XRP",
+    "expected_price": 1.0,
+    "dex": "xrpl",
+    "liquidity_usd": 120518.61
+  },
+  {
+    "chain": "polygon",
+    "pair_address": "0xA964b92C690f0B8efad5B46a278A84bD0EF8AC01",
+    "name": "FRAX/WPOL",
+    "expected_price": 1.0,
+    "dex": "fraxswap",
+    "liquidity_usd": 120343.39
+  },
+  {
+    "chain": "hyperevm",
+    "pair_address": "0x975e8F75b5F2D9c1d2f3a35E957459eA2B08EA30",
+    "name": "USDC/WHYPE",
+    "expected_price": 1.0,
+    "dex": "0x1Cd8363DfAdA19911f745BA984fce02b42c943bF",
+    "liquidity_usd": 119037.53
+  },
+  {
+    "chain": "pulsechain",
+    "pair_address": "0x8c52470a05eEB2fCe4905688Ec59bFDd32E71D07",
+    "name": "WBTC/WPLS",
+    "expected_price": 1.0,
+    "dex": "pulsex",
+    "liquidity_usd": 119017.46
+  },
+  {
+    "chain": "celo",
+    "pair_address": "0x1a810e0B6c2dd5629AFa2f0c898b9512C6F78846",
+    "name": "USDC/USD₮",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 116794.93
+  },
+  {
+    "chain": "base",
+    "pair_address": "0xEb58703922961813C19Fa755E83F1396FF9c99B0",
+    "name": "tBTC/cbBTC",
+    "expected_price": 1.0,
+    "dex": "quickswap",
+    "liquidity_usd": 112250.63
+  },
+  {
+    "chain": "optimism",
+    "pair_address": "0x8949A8E02998d76D7a703cAC9eE7e0f529828011",
+    "name": "tBTC/WBTC",
+    "expected_price": 1.0,
+    "dex": "velodrome",
+    "liquidity_usd": 111246.42
+  },
+  {
+    "chain": "aptos",
+    "pair_address": "0xac21d74053633a030281bd0311361442eb2c4f2f95b19c4599b741c439cff77f",
+    "name": "USDt/USDC",
+    "expected_price": 1.0,
+    "dex": "cellana",
+    "liquidity_usd": 110506.12
+  },
+  {
+    "chain": "osmosis",
+    "pair_address": "1223-ibc_D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858-ibc_498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+    "name": "USDC/USDC",
+    "expected_price": 1.0,
+    "dex": "osmosis",
+    "liquidity_usd": 109954.31
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x3Fc28BFac25fC8e93B5b2fc15EfBBD5a8aA44eFe",
+    "name": "wUSDR/USDbC",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 108956.83
+  },
+  {
+    "chain": "osmosis",
+    "pair_address": "1220-ibc_4ABBEF4C8926DDDB320AE5188CFD63267ABBCEFC0583E4AE05D6E5AA2401DDAB-ibc_498A0751C798A0D9A389AA3691123DADA57DAA4FE165D5C75894505B876BA6E4",
+    "name": "USDT/USDC",
+    "expected_price": 1.0,
+    "dex": "osmosis",
+    "liquidity_usd": 107419.35
+  },
+  {
+    "chain": "celo",
+    "pair_address": "0x953f87a2C26344d4A667a640758A1Fa038eEA80E",
+    "name": "USDC/USD₮",
+    "expected_price": 1.0,
+    "dex": "velodrome",
+    "liquidity_usd": 106347.23
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x2722C8f9B5E2aC72D1f225f8e8c990E449ba0078",
+    "name": "tBTC/WETH",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 105465.93
+  },
+  {
+    "chain": "apechain",
+    "pair_address": "0xbd04919285728923e298F898294319a84a0DBD1E",
+    "name": "USDC.e/ApeUSD",
+    "expected_price": 1.0,
+    "dex": "camelot",
+    "liquidity_usd": 104451.71
+  },
+  {
+    "chain": "base",
+    "pair_address": "0xe6d7b2D37F14d1Fb42a0A5ba8715c78494A5Ea39",
+    "name": "XRP/USDbC",
+    "expected_price": 1.0,
+    "dex": "sushiswap",
+    "liquidity_usd": 103737.92
+  },
+  {
+    "chain": "celo",
+    "pair_address": "0xA6A14E6767C07Ffba3786Ac0054A8647Cfdca58D",
+    "name": "WETH/USD₮",
+    "expected_price": 1.0,
+    "dex": "velodrome",
+    "liquidity_usd": 103265.21
+  },
+  {
+    "chain": "solana",
+    "pair_address": "Et9ds3gAzGath532xasPiXt5bJxhSqkuZX4fPwwYwTcL",
+    "name": "WBTC/xBTC",
+    "expected_price": 1.0,
+    "dex": "orca",
+    "liquidity_usd": 102257.74
+  },
+  {
+    "chain": "solana",
+    "pair_address": "5NQTw1WqVEt6wP1LmohsrYDyJp2NDipdv6eULVNByXMb",
+    "name": "WBTC/USDC",
+    "expected_price": 1.0,
+    "dex": "meteora",
+    "liquidity_usd": 101791.62
+  },
+  {
+    "chain": "linea",
+    "pair_address": "0xd236b61B6445F2aF7775814Aa690BeC421ce3DD6",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "syncswap",
+    "liquidity_usd": 100556.07
+  },
+  {
+    "chain": "abstract",
+    "pair_address": "0xf9b8af78cfDEaDB502A0B9D3D5712FfcdE707860",
+    "name": "USDT/USDC.e",
+    "expected_price": 1.0,
+    "dex": "abstractswap",
+    "liquidity_usd": 99949.46
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x0B25c51637c43decd6CC1C1e3da4518D54ddb528",
+    "name": "DOLA/USDbC",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 99381.14
+  },
+  {
+    "chain": "polygon",
+    "pair_address": "0xCDd1aD14b4c156aFF8D833dE1793F67d75237909",
+    "name": "renBTC/WBTC",
+    "expected_price": 1.0,
+    "dex": "gravityfinance",
+    "liquidity_usd": 98765.75
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x44Ecc644449fC3a9858d2007CaA8CFAa4C561f91",
+    "name": "cbETH/WETH",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 97174.85
+  },
+  {
+    "chain": "multiversx",
+    "pair_address": "erd1qqqqqqqqqqqqqpgqq6y660esmedtm0neqwgkddfezuys68k42jps7pu0r9",
+    "name": "WBTC/EGLD",
+    "expected_price": 1.0,
+    "dex": "xexchange",
+    "liquidity_usd": 96822.27
+  },
+  {
+    "chain": "celo",
+    "pair_address": "0x116361f4f45e310347B43CD098FDFA459760EA7f",
+    "name": "USDC/EURm",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 96281.74
+  },
+  {
+    "chain": "optimism",
+    "pair_address": "0x6dA98Bde0068d10DDD11b468b197eA97D96F96Bc",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "velodrome",
+    "liquidity_usd": 95794.29
+  },
+  {
+    "chain": "bsc",
+    "pair_address": "0xcC1c80529B483A663d869C137a1Fd0cBD9855dC8",
+    "name": "wstETH/BTCB",
+    "expected_price": 1.0,
+    "dex": "pancakeswap",
+    "liquidity_usd": 95608.79
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x7fC77b5c7614E1533320Ea6DDc2Eb61fa00A9714-0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D-0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "name": "renBTC/WBTC",
+    "expected_price": 1.0,
+    "dex": "curve",
+    "liquidity_usd": 93700.05
+  },
+  {
+    "chain": "bsc",
+    "pair_address": "0xf17bF80c1d0eEb1fdEE48340E829947bd28847d0",
+    "name": "TBTC/USDT",
+    "expected_price": 1.0,
+    "dex": "pancakeswap",
+    "liquidity_usd": 92776.02
+  },
+  {
+    "chain": "arbitrum",
+    "pair_address": "0x09ba302A3f5ad2bF8853266e271b005A5b3716fe",
+    "name": "rETH/WETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 89949.73
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x20E068D76f9E90b90604500B84c7e19dCB923e7e",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 89820.67
+  },
+  {
+    "chain": "arbitrum",
+    "pair_address": "0x889af944e95788f770983062B13B5A52E367029B",
+    "name": "tBTC/WBTC",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 85212.81
+  },
+  {
+    "chain": "solana",
+    "pair_address": "HCfytQ49w6Dn9UhHCqjNYTZYQ6z5SwqmsyYYqW4EKDdA",
+    "name": "WBTC/SOL",
+    "expected_price": 1.0,
+    "dex": "raydium",
+    "liquidity_usd": 83761.91
+  },
+  {
+    "chain": "scroll",
+    "pair_address": "0xCaF2430dA37F9aE46f2F863D71b3DeB7beFc142E",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "syncswap",
+    "liquidity_usd": 82948.04
+  },
+  {
+    "chain": "linea",
+    "pair_address": "0xC1b80472388e830d015C8089Cc39895b14040DFf",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "syncswap",
+    "liquidity_usd": 81914.11
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x828b154032950C8ff7CF8085D841723Db2696056",
+    "name": "stETH/WETH",
+    "expected_price": 1.0,
+    "dex": "curve",
+    "liquidity_usd": 81344.52
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x9e13996A9f5a9870C105D7e3C311848273740e98",
+    "name": "rETH/WETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 80744.62
+  },
+  {
+    "chain": "optimism",
+    "pair_address": "0xCc4Dd8Bc7967D46060bA3fAAA8e525A35625F8b4",
+    "name": "FRAX/WETH",
+    "expected_price": 1.0,
+    "dex": "fraxswap",
+    "liquidity_usd": 80268.09
+  },
+  {
+    "chain": "base",
+    "pair_address": "0xf13203ddbf2c9816a79b656a1a952521702715d92fea465b84ae2ed6e94a7f22",
+    "name": "USDT/USDC",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 79898.66
+  },
+  {
+    "chain": "seiv2",
+    "pair_address": "0x1E7ADE0350e9435cEDF0A9A87a8983bBBACaBF2a",
+    "name": "WETH/USDC",
+    "expected_price": 1.0,
+    "dex": "dragonswap",
+    "liquidity_usd": 79814.39
+  },
+  {
+    "chain": "base",
+    "pair_address": "0xEf3EFc734a3FE0bF20762992ec839939bA3Af050",
+    "name": "LUSD/BOLD",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 78704.16
+  },
+  {
+    "chain": "zksync",
+    "pair_address": "0x722fb4023f36fBedDd6150B5b78c3A070d0E4CD8",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "syncswap",
+    "liquidity_usd": 78703.07
+  },
+  {
+    "chain": "cronos",
+    "pair_address": "0x3Eb9FF92e19b73235A393000C176c8bb150F1B20",
+    "name": "DAI/WCRO",
+    "expected_price": 1.0,
+    "dex": "vvsfinance",
+    "liquidity_usd": 78599.16
+  },
+  {
+    "chain": "optimism",
+    "pair_address": "0x4F3da11c5caDf644ae023Dbad01008a934C993E2",
+    "name": "LUSD/USDC",
+    "expected_price": 1.0,
+    "dex": "velodrome",
+    "liquidity_usd": 77246.09
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-4179:4",
+    "name": "USDC.e/USDC",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 75134.11
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-4179:2",
+    "name": "USDC.e/USDt",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 74851.87
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-4179:5",
+    "name": "USDC.e/USDT.e",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 74741.6
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x0f3159811670c117c372428D4E69AC32325e4D0F",
+    "name": "rETH/WETH",
+    "expected_price": 1.0,
+    "dex": "curve",
+    "liquidity_usd": 74584.54
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x0e7C44658FB8dcf8f9cbCE5DCee9fCe924D3D8a3",
+    "name": "cbETH/cbBTC",
+    "expected_price": 1.0,
+    "dex": "quickswap",
+    "liquidity_usd": 74036.16
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x434355f7EAfCF3A5b8A6EF755505B845682F906b",
+    "name": "tBTC/cbBTC",
+    "expected_price": 1.0,
+    "dex": "hydrex",
+    "liquidity_usd": 72286.24
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x4C36388bE6F416A29C8d8Eee81C771cE6bE14B18",
+    "name": "WETH/USDbC",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 71312.79
+  },
+  {
+    "chain": "ethereum",
+    "pair_address": "0x177622E79aCECe98C39F6E12fa78aC7Fc8a8bf62",
+    "name": "cbETH/WETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 69438.55
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x10648BA41B8565907Cfa1496765fA4D95390aa0d",
+    "name": "cbETH/WETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 66769.59
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x686A4Cdd3F9059e56603840E320e5945E2190216",
+    "name": "cbETH/WETH",
+    "expected_price": 1.0,
+    "dex": "alien-base",
+    "liquidity_usd": 65718.75
+  },
+  {
+    "chain": "arbitrum",
+    "pair_address": "0xdEb89DE4bb6ecf5BFeD581EB049308b52d9b2Da7",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "camelot",
+    "liquidity_usd": 65416.24
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x15D8efc10Fe04f7E40773ab7e3adCca4Fd6A6fA9",
+    "name": "VCNT/USDbC",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 64405.5
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x723AEf6543aecE026a15662Be4D3fb3424D502A9",
+    "name": "tBTC/USDbC",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 63026.38
+  },
+  {
+    "chain": "near",
+    "pair_address": "refv1-2",
+    "name": "DAI/wNEAR",
+    "expected_price": 1.0,
+    "dex": "rhea-finance",
+    "liquidity_usd": 62588
+  },
+  {
+    "chain": "optimism",
+    "pair_address": "0x04F6C85A1B00F6D9B75f91FD23835974Cc07E65c",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 59751.75
+  },
+  {
+    "chain": "optimism",
+    "pair_address": "0x7Ca75bdEa9dEde97F8B13C6641B768650CB83782",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "beethovenx",
+    "liquidity_usd": 58082.14
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x565aecF84b5d30a6E79a5CEf3f0dA0Fc4280dEBC",
+    "name": "wstETH/AERO",
+    "expected_price": 1.0,
+    "dex": "aerodrome",
+    "liquidity_usd": 53209.56
+  },
+  {
+    "chain": "arbitrum",
+    "pair_address": "0x5201f6482EEA49c90FE609eD9d8F69328bAc8ddA",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "camelot",
+    "liquidity_usd": 52844.59
+  },
+  {
+    "chain": "base",
+    "pair_address": "0x076a29b387dda06ce850805147fb1817df8680a7985de8a06ba191a643adde36",
+    "name": "cbETH/ETH",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 52427.97
+  },
+  {
+    "chain": "pulsechain",
+    "pair_address": "0xc63B0708E2F7e69CB8A1df0e1389A98C35A76D52",
+    "name": "FRAX/USDC",
+    "expected_price": 1.0,
+    "dex": "uniswap",
+    "liquidity_usd": 52392.54
+  },
+  {
+    "chain": "zksync",
+    "pair_address": "0x69B9A2efacE47419D496d9A550A162185999ACE5",
+    "name": "BUSD/USDC.e",
+    "expected_price": 1.0,
+    "dex": "syncswap",
+    "liquidity_usd": 52381.07
+  },
+  {
+    "chain": "scroll",
+    "pair_address": "0xC21B7961fF68c94B29cF20e1Ab32D18E10701bFF",
+    "name": "wstETH/WETH",
+    "expected_price": 1.0,
+    "dex": "syncswap",
+    "liquidity_usd": 50169.76
+  }
+]
