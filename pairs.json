@@ -572,17 +572,6 @@
     "quote_symbol": "USDT"
   },
   {
-    "chain": "optimism",
-    "pair_address": "0xbC26519f936A90E78fe2C9aA2A03CC208f041234",
-    "name": "SUSD/USDC",
-    "expected_price": 1.0,
-    "pair_type": "stable/stable",
-    "dex": "velodrome",
-    "liquidity_usd": 986368.67,
-    "base_symbol": "SUSD",
-    "quote_symbol": "USDC"
-  },
-  {
     "chain": "arbitrum",
     "pair_address": "0xc86Eb7B85807020b4548EE05B54bfC956eEbbfCD",
     "name": "USDC/USDC.E",
@@ -836,17 +825,6 @@
     "quote_symbol": "FRAX"
   },
   {
-    "chain": "linea",
-    "pair_address": "0x258d5f860B11ec73Ee200eB14f1b60A3B7A536a2",
-    "name": "USDC/USDT",
-    "expected_price": 1.0,
-    "pair_type": "stable/stable",
-    "dex": "syncswap",
-    "liquidity_usd": 371848.97,
-    "base_symbol": "USDC",
-    "quote_symbol": "USDT"
-  },
-  {
     "chain": "avalanche",
     "pair_address": "0x1150403B19315615Aad1638d9dd86cd866b2f456",
     "name": "USDT/USDC",
@@ -878,17 +856,6 @@
     "liquidity_usd": 336235.91,
     "base_symbol": "CBETH",
     "quote_symbol": "WETH"
-  },
-  {
-    "chain": "bsc",
-    "pair_address": "0x1e40450F8E21BB68490D7D91Ab422888Fb3D60f1",
-    "name": "USDT/USDC",
-    "expected_price": 1.0,
-    "pair_type": "stable/stable",
-    "dex": "0xC6B7ee49D386bAe4FD501F2d2f8d18828F1f6285",
-    "liquidity_usd": 333164.06,
-    "base_symbol": "USDT",
-    "quote_symbol": "USDC"
   },
   {
     "chain": "optimism",
@@ -1098,17 +1065,6 @@
     "liquidity_usd": 207313.75,
     "base_symbol": "USDC",
     "quote_symbol": "USDC.E"
-  },
-  {
-    "chain": "zksync",
-    "pair_address": "0x0E595bfcAfb552F83E25d24e8a383F88c1Ab48A4",
-    "name": "USDC.E/USDT",
-    "expected_price": 1.0,
-    "pair_type": "stable/stable",
-    "dex": "syncswap",
-    "liquidity_usd": 204152.16,
-    "base_symbol": "USDC.E",
-    "quote_symbol": "USDT"
   },
   {
     "chain": "scroll",
@@ -1397,17 +1353,6 @@
     "quote_symbol": "USDT"
   },
   {
-    "chain": "scroll",
-    "pair_address": "0x2076d4632853FB165Cf7c7e7faD592DaC70f4fe1",
-    "name": "USDC/USDT",
-    "expected_price": 1.0,
-    "pair_type": "stable/stable",
-    "dex": "syncswap",
-    "liquidity_usd": 145143.1,
-    "base_symbol": "USDC",
-    "quote_symbol": "USDT"
-  },
-  {
     "chain": "base",
     "pair_address": "0x5D0bC342178C8Fe2c2f9A9fcC9D52555C99936db",
     "name": "USDC/USDBC",
@@ -1560,17 +1505,6 @@
     "liquidity_usd": 110364.67,
     "base_symbol": "GHO",
     "quote_symbol": "USDC"
-  },
-  {
-    "chain": "optimism",
-    "pair_address": "0xd16232ad60188B68076a235c65d692090caba155",
-    "name": "SUSD/USDC.E",
-    "expected_price": 1.0,
-    "pair_type": "stable/stable",
-    "dex": "velodrome",
-    "liquidity_usd": 107453.4,
-    "base_symbol": "SUSD",
-    "quote_symbol": "USDC.E"
   },
   {
     "chain": "ethereum",
@@ -1893,17 +1827,6 @@
   },
   {
     "chain": "optimism",
-    "pair_address": "0xAdb35413eC50E0Afe41039eaC8B930d313E94FA4",
-    "name": "SUSD/DAI",
-    "expected_price": 1.0,
-    "pair_type": "stable/stable",
-    "dex": "uniswap",
-    "liquidity_usd": 76677.72,
-    "base_symbol": "SUSD",
-    "quote_symbol": "DAI"
-  },
-  {
-    "chain": "optimism",
     "pair_address": "0xbf16ef186e715668AA29ceF57e2fD7f9D48AdFE6",
     "name": "USDC.E/DAI",
     "expected_price": 1.0,
@@ -2143,17 +2066,6 @@
     "liquidity_usd": 58614.74,
     "base_symbol": "DAI",
     "quote_symbol": "USDC.E"
-  },
-  {
-    "chain": "zksync",
-    "pair_address": "0x0259d9Dfb638775858B1D072222237E2Ce7111C0",
-    "name": "USDC/USDT",
-    "expected_price": 1.0,
-    "pair_type": "stable/stable",
-    "dex": "syncswap",
-    "liquidity_usd": 57464.11,
-    "base_symbol": "USDC",
-    "quote_symbol": "USDT"
   },
   {
     "chain": "ethereum",
@@ -4158,17 +4070,6 @@
     "quote_symbol": "WETH"
   },
   {
-    "chain": "optimism",
-    "pair_address": "0x6d5BA400640226e24b50214d2bBb3D4Db8e6e15a",
-    "name": "SUSD/USDC.E",
-    "expected_price": 1.0,
-    "pair_type": "stable/stable",
-    "dex": "velodrome",
-    "liquidity_usd": 5472.37,
-    "base_symbol": "SUSD",
-    "quote_symbol": "USDC.E"
-  },
-  {
     "chain": "scroll",
     "pair_address": "0xAE5Aa896bB93F4c7C5660b7fC894b3892255D015",
     "name": "USDC/USDT",
@@ -4222,17 +4123,6 @@
     "liquidity_usd": 5190.2,
     "base_symbol": "DAI",
     "quote_symbol": "USDT"
-  },
-  {
-    "chain": "optimism",
-    "pair_address": "0x93FC04cd6d108588Ecd844C7D60f46635037b5A3",
-    "name": "SUSD/USDC.E",
-    "expected_price": 1.0,
-    "pair_type": "stable/stable",
-    "dex": "velodrome",
-    "liquidity_usd": 5167.04,
-    "base_symbol": "SUSD",
-    "quote_symbol": "USDC.E"
   },
   {
     "chain": "scroll",
