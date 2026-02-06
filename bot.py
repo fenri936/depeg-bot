@@ -160,8 +160,7 @@ async def redis_listener():
                                 await bot.send_message(
                                     int(user_id),
                                     alert_message,
-                                    parse_mode="HTML",
-                                    disable_web_page_preview=True  # ← Добавить эту строку
+                                    parse_mode="HTML"
                                 )
                                 logger.info(f"✅ Alert sent to {user_id}")
                             except Exception as e:
@@ -174,7 +173,7 @@ async def redis_listener():
                     except Exception as e:
                         logger.error(f"Error processing alert: {e}")
             
-            await asyncio.sleep(0.01)
+            await asyncio.sleep(0.01)  # Небольшая задержка чтобы не нагружать CPU
                     
     except asyncio.CancelledError:
         logger.info("Redis listener cancelled")
@@ -190,7 +189,7 @@ async def main():
     logger.info("Monitor active")
     
     # Инициализация Redis ПЕРЕД всем остальным
-    await init_redis()  # ← Добавь эту строку
+    await init_redis()
     
     # Запуск Redis listener в фоне
     asyncio.create_task(redis_listener())
@@ -200,7 +199,7 @@ async def main():
         await dp.start_polling(bot)
     finally:
         await bot.session.close()
-        if redis_client:  # Закрываем соединение при завершении
+        if redis_client:
             await redis_client.close()
 
 if __name__ == "__main__":
