@@ -160,7 +160,8 @@ async def redis_listener():
                                 await bot.send_message(
                                     int(user_id),
                                     alert_message,
-                                    parse_mode="HTML"
+                                    parse_mode="HTML",
+                                    disable_web_page_preview=True  # ← ДОБАВЬ ЭТУ СТРОКУ
                                 )
                                 logger.info(f"✅ Alert sent to {user_id}")
                             except Exception as e:
@@ -173,7 +174,7 @@ async def redis_listener():
                     except Exception as e:
                         logger.error(f"Error processing alert: {e}")
             
-            await asyncio.sleep(0.01)  # Небольшая задержка чтобы не нагружать CPU
+            await asyncio.sleep(0.01)
                     
     except asyncio.CancelledError:
         logger.info("Redis listener cancelled")

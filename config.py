@@ -1,7 +1,7 @@
 import os
 import json
 from dataclasses import dataclass
-from typing import List
+from typing import List, Optional
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -13,6 +13,7 @@ class MonitoringPair:
     pair_address: str
     name: str
     expected_price: float = 1.0
+    pair_type: str = 'stable/stable'  # ← НОВОЕ ПОЛЕ
 
 @dataclass
 class Config:
@@ -55,7 +56,8 @@ class Config:
                     chain=pair['chain'],
                     pair_address=pair['pair_address'],
                     name=pair['name'],
-                    expected_price=pair.get('expected_price', 1.0)
+                    expected_price=pair.get('expected_price', 1.0),
+                    pair_type=pair.get('pair_type', 'stable/stable')  # ← ЧИТАЕМ НОВОЕ ПОЛЕ
                 )
                 for pair in pairs_data
             ]
@@ -65,7 +67,7 @@ class Config:
             
         except FileNotFoundError:
             print(f"⚠️ Файл {pairs_file} не найден!")
-            print("ℹ️ Запусти: python fetch_pairs.py")
+            print("ℹ️ Запусти: python fetch_liquid_pairs.py")
             return []
             
         except Exception as e:
