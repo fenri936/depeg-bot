@@ -102,6 +102,27 @@ async def cmd_status(message: Message):
     
     await message.answer(status_text, parse_mode="HTML")
 
+@router.message(Command("ping"))
+async def cmd_ping(message: Message):
+    """Обработчик команды /ping - проверка работоспособности"""
+    try:
+        # Проверяем подключение к Redis
+        redis_status = "✅ OK" if redis_client and await redis_client.ping() else "❌ Disconnected"
+    except Exception:
+        redis_status = "❌ Error"
+    
+    # Используем timezone-aware datetime для правильного времени
+    from datetime import timezone, timedelta
+    eet_tz = timezone(timedelta(hours=2))  # EET = UTC+2
+    current_time = datetime.now(eet_tz)
+    
+    uptime_text = "🟢 Бот работает\n\n"
+    uptime_text += f"Redis: {redis_status}\n"
+    uptime_text += f"Время: {current_time.strftime('%Y-%m-%d %H:%M:%S')} EET\n\n"
+    uptime_text += "Все системы работают нормально! ✅"
+    
+    await message.answer(uptime_text)
+    logger.info(f"Ping command received from user {message.from_user.id}")
 
 async def format_alert_message(alert_data: dict) -> str:
     """Форматирование сообщения об алерте"""

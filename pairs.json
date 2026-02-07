@@ -2343,17 +2343,6 @@
     "quote_symbol": "DAI"
   },
   {
-    "chain": "zksync",
-    "pair_address": "0xA93472C1B88243793E145B237b7172F1EE547836",
-    "name": "USDC.E/USDC",
-    "expected_price": 1.0,
-    "pair_type": "stable/stable",
-    "dex": "syncswap",
-    "liquidity_usd": 43416.31,
-    "base_symbol": "USDC.E",
-    "quote_symbol": "USDC"
-  },
-  {
     "chain": "ethereum",
     "pair_address": "0x42E03280C99579B048Bc001531Bf7015Bc252653-0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48-0xdAC17F958D2ee523a2206206994597C13D831ec7",
     "name": "USDC/USDT",
