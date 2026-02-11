@@ -1,31 +1,17 @@
-name: Deploy to Server
+name: Deploy on Home Server
 
 on:
   push:
-    branches:
-      - main  # Срабатывает при пуше в ветку main
+    branches: [ "main" ]
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted  # <--- ВАЖНО: меняем ubuntu-latest на self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          port: 22
-          script: |
-            cd /depeg-bot
-            
-            git pull origin main
-
-            docker compose up -d --build --remove-orphans
-            
-            docker image prune -f
-            
-            echo "Deployment successful!"
+      - name: Update and Restart Docker
+        run: |
+          docker compose up -d --build --remove-orphans
+          docker image prune -f
