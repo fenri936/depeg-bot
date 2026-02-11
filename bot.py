@@ -56,7 +56,7 @@ subscribed_users = set()
 
 @router.message(Command("start"))
 async def cmd_start(message: Message):
-    """Обработчик команды /start"""
+    """Обрабочик команды /start"""
     user_id = message.from_user.id
     subscribed_users.add(user_id)
     
