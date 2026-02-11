@@ -116,7 +116,7 @@ async def cmd_ping(message: Message):
     eet_tz = timezone(timedelta(hours=2))  # EET = UTC+2
     current_time = datetime.now(eet_tz)
     
-    uptime_text = "🟢 Бот работает\n\n"
+    uptime_text = "🟢 Бот хорошо что работает\n\n"
     uptime_text += f"Redis: {redis_status}\n"
     uptime_text += f"Время: {current_time.strftime('%Y-%m-%d %H:%M:%S')} EET\n\n"
     uptime_text += "Все системы работают нормально! ✅"
