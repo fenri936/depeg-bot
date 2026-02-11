@@ -13,5 +13,5 @@ jobs:
 
       - name: Update and Restart Docker
         run: |
-          docker compose up -d --build --remove-orphans
+          docker-compose up -d --build --remove-orphans
           docker image prune -f
