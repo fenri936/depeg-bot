@@ -64,7 +64,7 @@ async def cmd_start(message: Message):
         "🟢 <b>Monitor active</b>\n\n"
         "Вы подписаны на алерты о депеге стейблкоинов.\n"
         f"Порог срабатывания: {config.depeg_threshold}%\n\n"
-        "Команды:\n"
+        "Комады:\n"
         "/start - Подписаться на алерты\n"
         "/stop - Отписаться от алертов\n"
         "/status - Статус мониторинга",

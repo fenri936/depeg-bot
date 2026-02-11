@@ -13,7 +13,7 @@ class MonitoringPair:
     pair_address: str
     name: str
     expected_price: float = 1.0
-    pair_type: str = 'stable/stable'  # ← НОВОЕ ПОЛЕ
+    pair_type: str = 'stable/stable'  
 
 @dataclass
 class Config:
