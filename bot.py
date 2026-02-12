@@ -34,31 +34,20 @@ async def init_redis():
     )
 
 async def add_subscriber(user_id: int):
-    await redis_client.sadd("subscribers", str(user_id))
+    return await redis_client.sadd("subscribers", str(user_id))
 
 async def remove_subscriber(user_id: int):
-    await redis_client.srem("subscribers", str(user_id))
+    return await redis_client.srem("subscribers", str(user_id))
 
 async def get_subscribers():
     return await redis_client.smembers("subscribers")
-
-# В cmd_start
-@router.message(Command("start"))
-async def cmd_start(message: Message):
-    user_id = message.from_user.id
-    await add_subscriber(user_id)  # Сохраняется в Redis
-    # ...
-
-
-# Хранилище подписанных пользователей
-subscribed_users = set()
 
 
 @router.message(Command("start"))
 async def cmd_start(message: Message):
     """Обрабочик команды /start"""
     user_id = message.from_user.id
-    subscribed_users.add(user_id)
+    await add_subscriber(user_id)
     
     await message.answer(
         "🟢 <b>Monitor active</b>\n\n"
@@ -77,8 +66,7 @@ async def cmd_start(message: Message):
 async def cmd_stop(message: Message):
     """Обработчик команды /stop"""
     user_id = message.from_user.id
-    if user_id in subscribed_users:
-        subscribed_users.remove(user_id)
+    if await remove_subscriber(user_id):
         await message.answer("🔴 Вы отписались от алертов")
         logger.info(f"User {user_id} unsubscribed from alerts")
     else:
@@ -88,9 +76,10 @@ async def cmd_stop(message: Message):
 @router.message(Command("status"))
 async def cmd_status(message: Message):
     """Обработчик команды /status"""
+    subscribers = await get_subscribers()
     status_text = (
         f"📊 <b>Статус мониторинга</b>\n\n"
-        f"Подписчиков: {len(subscribed_users)}\n"
+        f"Подписчиков: {len(subscribers)}\n"
         f"Порог депега: {config.depeg_threshold}%\n"
         f"Интервал проверки: {config.check_interval}с\n"
         f"Отслеживаемых пар: {len(config.monitoring_pairs)}\n\n"

@@ -1,17 +1,77 @@
-name: Deploy on Home Server
+name: CI/CD Production Pipeline
 
+# Триггеры: Когда запускать?
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" ]  # Деплой только при пуше в main
+  pull_request:
+    branches: [ "main" ]  # При PR в main — только тесты (без деплоя)
 
 jobs:
+  # Работа 1: Проверка качества кода (Linter)
+  lint:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8
+          
+      - name: Run Linter (Flake8)
+        # Проверяет код на ошибки стиля. E501 игнорирует длинные строки (вкусовщина)
+        run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+  # Работа 2: Запуск тестов
+  test:
+    needs: lint  # Запустится только если прошел Linter
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Install testing tools
+        run: pip install pytest
+        
+      - name: Run Tests
+        # Здесь мы запускаем тесты. Если хоть один упадет — деплой отменится.
+        run: pytest
+
+  # Работа 3: Деплой на прод
   deploy:
-    runs-on: self-hosted  # <--- ВАЖНО: меняем ubuntu-latest на self-hosted
+    needs: test  # Запустится только если прошли тесты
+    # Важное условие: деплоим ТОЛЬКО если это ветка main, а не PR
+    if: github.ref == 'refs/heads/main' 
+    runs-on: self-hosted
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Update and Restart Docker
+      - name: Create .env file from Secrets
+        # Магия: берем секреты из GitHub и создаем файл .env на сервере
         run: |
-          docker compose up -d --build --remove-orphans
-          docker image prune -f
+          echo "BOT_TOKEN=${{ secrets.BOT_TOKEN }}" > .env
+          echo "REDIS_HOST=${{ secrets.REDIS_HOST }}" >> .env
+          echo "REDIS_PORT=${{ secrets.REDIS_PORT }}" >> .env
+          echo "REDIS_CHANNEL=${{ secrets.REDIS_CHANNEL }}" >> .env
+          echo "CHECK_INTERVAL=${{ secrets.CHECK_INTERVAL }}" >> .env
+          echo "DEPEG_THRESHOLD=${{ secrets.DEPEG_THRESHOLD }}" >> .env
+          echo "DEXSCREENER_API_URL=${{ secrets.DEXSCREENER_API_URL }}" >> .env
+          
+      - name: Build and Deploy
+        # Собираем и перезапускаем контейнеры
+        run: |
+          docker compose down
+          docker compose up -d --build
+          
+      - name: Cleanup
+        # Удаляем старые ненужные образы, чтобы не забить диск (Best Practice)
+        run: docker system prune -f
