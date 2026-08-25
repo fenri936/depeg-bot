@@ -2,12 +2,12 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Установка зависимостей
+ENV PYTHONPATH=/app/src
+
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Копирование кода
 COPY . .
 
-# По умолчанию запускаем bash (команда переопределяется в docker-compose)
-CMD ["bash"]
+CMD ["python", "-m", "depeg_bot.telegram_bot"]
+

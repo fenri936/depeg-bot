@@ -1,70 +1,60 @@
 name: CI/CD Production Pipeline
 
-# Триггеры: Когда запускать?
 on:
   push:
-    branches: [ "main" ]  # Деплой только при пуше в main
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]  # При PR в main — только тесты (без деплоя)
+    branches: ["main"]
 
 jobs:
-  # Работа 1: Проверка качества кода (Linter)
   lint:
     runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
-          
+          python-version: "3.11"
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install flake8
-          
-      - name: Run Linter (Flake8)
-        # Проверяет код на ошибки стиля. E501 игнорирует длинные строки (вкусовщина)
+
+      - name: Run syntax lint
         run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
 
-  # Работа 2: Запуск тестов
   test:
-    needs: lint  # Запустится только если прошел Linter
+    needs: lint
     runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
-        
-      - name: Install testing tools
+          python-version: "3.11"
+
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pytest pytest-asyncio
-          pip install aiogram redis aiohttp python-dotenv requests
-        
-      - name: Run Tests
-        # Здесь мы запускаем тесты. Если хоть один упадет — деплой отменится.
+          pip install -r requirements.txt
+
+      - name: Run tests
         run: pytest
 
-  # Работа 3: Деплой на прод
   deploy:
-    needs: test  # Запустится только если прошли тесты
-    # Важное условие: деплоим ТОЛЬКО если это ветка main, а не PR
-    if: github.ref == 'refs/heads/main' 
+    needs: test
+    if: github.ref == 'refs/heads/main'
     runs-on: self-hosted
-    
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Create .env file from Secrets
-        # Магия: берем секреты из GitHub и создаем файл .env на сервере
+      - name: Create .env from GitHub Secrets
         run: |
           echo "BOT_TOKEN=${{ secrets.BOT_TOKEN }}" > .env
           echo "REDIS_HOST=${{ secrets.REDIS_HOST }}" >> .env
@@ -73,13 +63,12 @@ jobs:
           echo "CHECK_INTERVAL=${{ secrets.CHECK_INTERVAL }}" >> .env
           echo "DEPEG_THRESHOLD=${{ secrets.DEPEG_THRESHOLD }}" >> .env
           echo "DEXSCREENER_API_URL=${{ secrets.DEXSCREENER_API_URL }}" >> .env
-          
-      - name: Build and Deploy
-        # Собираем и перезапускаем контейнеры
+
+      - name: Build and deploy containers
         run: |
           docker compose down
           docker compose up -d --build
-          
-      - name: Cleanup
-        # Удаляем старые ненужные образы, чтобы не забить диск (Best Practice)
+
+      - name: Cleanup old Docker images
         run: docker system prune -f
+
